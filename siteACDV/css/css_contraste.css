@@ -1,7 +1,4 @@
 @charset "utf-8";
-/* CSS Document */
-
-/*------ Geral ------- */
 
 article,aside,footer,header,hgroup,nav,section {
 display: block;
@@ -575,7 +572,7 @@ margin:0;
 padding: 0 0 0 3%;
 }
 
-/*------ Serviços ------- */
+/*------ Atividades ------- */
 
 
 #qdrocor {
@@ -623,18 +620,12 @@ border-radius: 12px;
 border: 1px #999 solid;
 }
 
-
-
-/*------ Serviços ------- */
-
 .navegadores {
 width: 40%;
 height: auto;
 display:inline;
 max-width: 500px;
 }
-
-/*------ Portfolio ------- */
 
 .jobs {
  width: 100%;
@@ -658,10 +649,6 @@ float: left;
 display: inline;
 position:relative;
 }
-
-
-/*------ Equipe ------- */
-
 
 .qdroequipe1 {background-color: #000;}
 

@@ -1,11 +1,6 @@
-
-
 [tabindex="-1"]:focus {
     outline: 0!important
 }
-
-
-
 .btn {
     display: inline-block;
     font-weight: 400;

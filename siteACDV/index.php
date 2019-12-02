@@ -60,10 +60,10 @@
 			<!--============================== header =================================-->
 			<header>
 				<div class="divimg">
-					<div class="textotop">"O poder da web est&aacute; em sua universalidade. <br />Acesso para todos, independente de defici&ecirc;ncia, &eacute; um aspecto essencial."<br />
+					<div class="textotop">"O poder da web está em sua universalidade. <br />Acesso para todos, independente de defici&ecirc;ncia, &eacute; um aspecto essencial."<br />
 						<span class="destaque">Tim Berners-Lee, inventor da World Wide Web</span></div>
 
-					<h1><img src="imagens/faixatop2.png" width="1440" height="344" class="faixavisual" alt="Logo do projeto sobre um fundo azul com pontos ligados em rede." /></h1>
+					<h1><img src="imagens/faixatop2.png" width="1440" height="344" class="faixavisual" alt="" /></h1>
 				</div>
 			</header>
 			<!--============================== content =================================-->
@@ -74,7 +74,7 @@
 				</div>
 				<div class="noticiashome">
 					<a href="noticias/noticia1.php" class="azesc">
-						<img src="imagens/noticia1.jpg" alt="Clodoaldo Silva - Blog Parapan de Lima 2019" width="500" height="386" class="fotoportfoliohome" />
+						<img src="imagens/noticia1.jpg" alt="Rapaz usando o óculos de realidade virtual" width="500" height="386" class="fotoportfoliohome" />
 						Microsoft cria ferramenta de realidade virtual para deficientes visuais<br /></a>
 						<a href="oticias/noticia1.php" class="noticia">
 						<p>A realidade virtual (RV) tem sido usada para diversos objetivos, como para o desenvolvimento de videogames mais imersivos. 
@@ -82,7 +82,7 @@
 				</div>
 				<div class="noticiashome">
 					<a href="noticias/noticia2.php" class="azesc">
-						<img src="imagens/noticia2.jpg" alt="Clodoaldo Silva - Blog Parapan de Lima 2019" width="500" height="386" class="fotoportfoliohome" />
+						<img src="imagens/noticia2.jpg" alt="Logo da Microsoft, em formato de uma janela, sob um fundo azul" width="500" height="386" class="fotoportfoliohome" />
 						Conheça funcionalidades para pessoas com deficiência visual<br /></a>
 						<a href="noticias/noticia2.php" class="noticia">
 						<p>A Microsoft anunciou melhorias e novos recursos para pessoas com deficiência visual ou cegueira completa, 
@@ -111,7 +111,7 @@
 								<div class="col-xs-12 col-sm-6 col-md-2">
 									<div class="img-container">
 										<a href="atividades.php" class="atividade">
-											<img src="imagens/pcDeficienteVisual.png" width="350" height="223" class="img-responsive" alt="Amazon Brasil" />
+											<img src="imagens/pcDeficienteVisual.png" width="350" height="223" class="img-responsive" alt="Aulas de informática na ACDV" />
 											<p class="text-center">Informática</p>
 										</a>
 									</div>
@@ -121,7 +121,7 @@
 								<div class="col-xs-12 col-sm-6 col-md-2">
 									<div class="img-container">
 										<a href="atividades.php" class="atividade">
-											<img src="imagens/braile.jpg" width="350" height="223" class="img-responsive" alt="Associação Paulista dos Amigos da Arte por meio da Secretaria da Cultura, Governo do Estado de São Paulo" />
+											<img src="imagens/braile.jpg" width="350" height="223" class="img-responsive" alt="Aulas de braile na ACDV" />
 											<p class="text-center">Braile</p>
 										</a>
 									</div>
@@ -131,7 +131,7 @@
 								<div class="col-xs-12 col-sm-6 col-md-2">
 									<div class="img-container">
 										<a href="atividades.php" class="atividade">
-											<img src="imagens/artesanato.jpg" width="350" height="223" class="img-responsive" alt="Clodoaldo Silva - Tubarão Paralímpico" />
+											<img src="imagens/artesanato.jpg" width="350" height="223" class="img-responsive" alt="Aulas de artesanato na ACDV" />
 											<p class="text-center">Artesanato</p>
 										</a>
 									</div>
@@ -142,7 +142,7 @@
 								<div class="col-xs-12 col-sm-6 col-md-2">
 									<div class="img-container">
 										<a href="atividades.php" class="atividade">
-											<img src="imagens/culinaria.jpg" width="350" height="223" class="img-responsive" alt="Favily Produtos Médico-Hospitalares" />
+											<img src="imagens/culinaria.jpg" width="350" height="223" class="img-responsive" alt="Aulas de culinária na ACDV" />
 											<p class="text-center">Culinária</p>
 										</a>
 									</div>
@@ -151,7 +151,7 @@
 								<div class="col-xs-12 col-sm-6 col-md-2">
 									<div class="img-container">
 										<a href="atividades.php" class="atividade">
-											<img src="imagens/crianca.png" width="350" height="223" class="img-responsive" alt="Fundação 1º de Maio" />
+											<img src="imagens/crianca.png" width="350" height="223" class="img-responsive" alt="Aulas para as crianças na ACDV" />
 											<p class="text-center">Crianças</p>
 										</a>
 									</div>
@@ -179,7 +179,7 @@
 									<li><b><a href="quemsomos.php" class="mapa">Quem Somos</b></a></li>
 									<li><b><a href="noticias.php" class="mapa">Notícias</b></a></li>
 									<li><b><a href="atividades.php" class="mapa">Atividades</b></a></li>
-									<li><b><a href="#" class="mapa">Doar</b></a></li>
+									<li><b><a href="mapadosite.php" class="mapa">Doar</b></a></li>
 									<li><b><a href="contato.php" class="mapa">Contato</b></a></li>
 								</ul>
 							</div>

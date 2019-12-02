@@ -135,50 +135,50 @@
                         <div style="width: 86%; margin: auto;">
                             <div class="qdroequipe">
                                 <div class="prof" tabindex="17">
-                                    <img src="imagens/artesanato.jpg" alt="Cláudia tem longos cabelos castanhos, veste camiseta creme e preta, colar com círculo dourado e sorri." class="fotoequipe" />
+                                    <img src="imagens/artesanato.jpg" alt="Foto pequena das mãos de uma pessoa sobre uma mesa  fazendo artesanato." class="fotoequipe" />
                                     <h3 class="jobs1">Artesanato</h3>
-                                    <p class="centro"><strong>Dias:</strong> <br /><b>Segunda: 08:00 às 12:00 <br /> Quarta: 08:00 às 12:00<br /><br />
-                                            Descrição do que é feito na atividade</b></p>
+                                    <p class="centro"><strong>Dias:</strong> <br /><b>Terça: 14:00 às 15:30 <br /> Quinta: 14:00 às 15:30<br /><br />
+                                            Aula de confecção de artesanatos</b></p>
                                 </div>
                             </div>
                             <div class="qdroequipe">
                                 <div class="prof" tabindex="18">
-                                    <img src="imagens/braile.jpg" alt="Cláudia tem longos cabelos castanhos, veste camiseta creme e preta, colar com círculo dourado e sorri." class="fotoequipe" />
+                                    <img src="imagens/braile.jpg" alt="Foto pequena de mãos lendo uma folha impressa em braile" class="fotoequipe" />
                                     <h3 class="jobs1">Braile</h3>
-                                    <p class="centro"><strong>Dias:</strong> <br /><b>Segunda: 08:00 às 12:00 <br /> Quarta: 08:00 às 12:00<br /><br />
-                                            Descrição do que é feito na atividade</b></p>
+                                    <p class="centro"><strong>Dia:</strong> <br /><b>Quarta: 14:00 às 17:00 <br /><br />
+                                            Aulas de braile para leitores iniciantes e avançados</b></p>
                                 </div>
                             </div>
                             <div class="qdroequipe">
                                 <div class="prof" tabindex="19">
-                                    <img src="imagens/culinaria.jpg" alt="Cláudia tem longos cabelos castanhos, veste camiseta creme e preta, colar com círculo dourado e sorri." class="fotoequipe" />
+                                    <img src="imagens/culinaria.jpg" alt="Foto pequena mostrando as mãos de uma cozinheira preparando um prato culinário" class="fotoequipe" />
                                     <h3 class="jobs1">Culinária</h3>
-                                    <p class="centro"><strong>Dias:</strong> <br /><b>Segunda: 08:00 às 12:00 <br /> Quarta: 08:00 às 12:00<br /><br />
+                                    <p class="centro"><strong>Dia:</strong> <br /><b>Terça: 14:00 às 17:00 <br /><br />
                                             Descrição do que é feito na atividade</b></p>
                                 </div>
                             </div>
                             <div class="qdroequipe">
                                 <div class="prof" tabindex="20">
-                                    <img src="imagens/pcDeficienteVisual.png" alt="Cláudia tem longos cabelos castanhos, veste camiseta creme e preta, colar com círculo dourado e sorri." class="fotoequipe" />
+                                    <img src="imagens/pcDeficienteVisual.png" alt="Foto pequena de um computador" class="fotoequipe" />
                                     <h3 class="jobs1">Informática</h3>
-                                    <p class="centro"><strong>Dias:</strong> <br /><b>Segunda: 08:00 às 12:00 <br /> Quarta: 08:00 às 12:00<br /><br />
-                                            Descrição do que é feito na atividade</b></p>
+                                    <p class="centro"><strong>Dias:</strong> <br /><b>Terça: 08:30 às 11:30 <br /> Quarta: 08:30 às 11:30<br /><br />
+                                            Aulas de informática e smartphones</b></p>
                                 </div>
                             </div>
                             <div class="qdroequipe">
                                 <div class="prof" tabindex="21">
-                                    <img src="imagens/crianca.png" alt="Cláudia tem longos cabelos castanhos, veste camiseta creme e preta, colar com círculo dourado e sorri." class="fotoequipe" />
+                                    <img src="imagens/crianca.png" alt="Foto pequena de uma criança sorrindo e com óculos escuro" class="fotoequipe" />
                                     <h3 class="jobs1">Crianças</h3>
-                                    <p class="centro"><strong>Dias:</strong> <br /><b>Segunda: 08:00 às 12:00 <br /> Quarta: 08:00 às 12:00<br /><br />
-                                            Descrição do que é feito na atividade</b></p>
+                                    <p class="centro"><strong>Dia:</strong> <br /><b>Quarta: 08:30 às 11:30 <br /><br />
+                                            Aulas para estímulos e desenvolvimento de reflexos oculares para crianças</b></p>
                                 </div>
                             </div>
                             <div class="qdroequipe">
                                 <div class="prof" tabindex="22">
-                                    <img src="imagens/idoso.jpg" alt="Cláudia tem longos cabelos castanhos, veste camiseta creme e preta, colar com círculo dourado e sorri." class="fotoequipe" />
+                                    <img src="imagens/idoso.jpg" alt="Foto pequena mostrando os olhos de uma pessoa idosa." class="fotoequipe" />
                                     <h3 class="jobs1">Idosos</h3>
-                                    <p class="centro"><strong>Dias:</strong> <br /><b>Segunda: 08:00 às 12:00 <br /> Quarta: 08:00 às 12:00<br /><br />
-                                            Descrição do que é feito na atividade</b></p>
+                                    <p class="centro"><strong>Dias:</strong> <br /><b>Segunda: 14:00 às 16:00 <br /> Quinta: 14:00 às 16:00<br /><br />
+                                            Acompanhamento individualizado para evoluação visual e motor</b></p>
                                 </div>
                             </div>
                         </div>

@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  <meta name="description" content="Projeto de criação de websites acessíveis Acesso para Todos, uma parceria entre as empresas ADEVA (Associação de Deficientes Visuais e Amigos), o escritório de design E-Hipermídia e a empresa de sistemas Web2Business." />
+  <meta name="description" content="Associação de Cegos e Deficientes Visuais ACDV." />
 
   <meta charset="UTF-8">
   <title>ACDV - Associado de Cegos e Deficientes Visuais</title>
@@ -29,17 +29,6 @@
 </head>
 
 <body>
-  <div id="fb-root"></div>
-  <script>
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
   <div id="container">
     <div id="top">
       <div id="acessibilidade" style="padding-bottom:0;">
@@ -82,7 +71,7 @@
           <div class="textotop">"O poder da web est&aacute; em sua universalidade. <br />Acesso para todos, independente de defici&ecirc;ncia, &eacute; um aspecto essencial."<br />
             <span class="destaque">Tim Berners-Lee, inventor da World Wide Web</span></div>
 
-          <h1><img src="imagens/faixatop2.png" width="1440" height="344" class="faixavisual" alt="Logo do projeto sobre um fundo azul com pontos ligados em rede." /></h1>
+          <h1><img src="imagens/faixatop2.png" width="1440" height="344" class="faixavisual" /></h1>
         </div>
       </header>
 

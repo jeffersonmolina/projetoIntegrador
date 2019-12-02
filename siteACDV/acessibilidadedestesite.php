@@ -169,7 +169,7 @@
 
                             <div style="clear:both;"></div>
                             <p>
-                                Estes atalhos podem ser utilizados nos navegadores <span class="negrito">Internet Explorer e Chrome.</span><br>
+                                Estes atalhos podem ser utilizados nos navegadores <span class="negrito">Chrome e Edge.</span><br>
                                 No <span class="negrito">Firefox</span>, no lugar de Alt + número, deve-se teclar simultaneamente Alt + Shift + número.<br>
                                 No <span class="negrito">Opera</span>, deve-se teclar Shift + Escape + número.
                             </p>

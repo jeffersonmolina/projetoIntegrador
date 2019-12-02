@@ -1,1056 +1,1340 @@
 @charset "utf-8";
-/* CSS Document */
-
-/*------ Geral ------- */
-
-article,aside,footer,header,hgroup,nav,section {
-	display: block;
+article,
+aside,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
 }
 
-article,section {
-	margin:0; 
-	padding:0; 
+article,
+section {
+    margin: 0;
+    padding: 0;
 }
 
-html, body {height:100%;}
+html,
+body {
+    height: 100%;
+}
 
 body {
-
-	margin:0; 
-	padding:0; 
-	background: #e6e6dc;
-	font-family: 'Droid Sans', sans-serif;
-	color:#333333;
-	text-align:left;
-
+    margin: 0;
+    padding: 0;
+    background: #e6e6dc;
+    font-family: 'Droid Sans', sans-serif;
+    color: #333333;
+    text-align: left;
 }
 
 .sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
+
 .sr-only-focusable:active,
 .sr-only-focusable:focus {
-	position: static;
-	width: auto;
-	height: auto;
-	margin: 0;
-	overflow: visible;
-	clip: auto;
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+}
+
+a:link {
+    text-decoration: underline;
+    color: #cc0000;
+}
+
+a:visited {
+    text-decoration: underline;
+    color: #666666;
+}
+
+a:focus {
+    text-decoration: underline;
+    color: #cc0000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #cc0000;
+}
+
+a:active {
+    text-decoration: underline;
+    color: #cc0000;
+}
+
+a.mapa:link {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 
+/*normal*/
 
-a:link{ text-decoration: underline; color: #cc0000;}
-a:visited { text-decoration: underline; color:#666666;}
-a:focus { text-decoration: underline; color: #cc0000;}
-a:hover { text-decoration: none; color: #cc0000; }
-a:active { text-decoration: underline; color: #cc0000;}
-
-a.mapa:link{ text-decoration: none; color:#ffffff;} /*normal*/
-a.mapa:visited { text-decoration: none; color: #ffffff;}/*visitado*/
-a.mapa:focus { text-decoration: none;  color:#cc0000;}/*foco selecionado*/
-a.mapa:hover { text-decoration: underline;  color:#cc0000;}/*quando a seta ta em cima*/
-a.mapa:active { text-decoration: none; color:#cc0000;}/*quando clicado*/
-
-a.noticia:link{ text-decoration: none; color:#000;} /*normal*/
-a.noticia:visited { text-decoration: none; color: #000;}/*visitado*/
-a.noticia:focus { text-decoration: none;  color:#000;}/*foco selecionado*/
-a.noticia:hover { text-decoration: underline;  color:rgb(77, 2, 2);}/*quando a seta ta em cima*/
-a.noticia:active { text-decoration: underline; color:#000;}/*quando clicado*/
-
-a.atividade:link{ text-decoration: none; color:#050505;} /*normal*/
-a.atividade:visited { text-decoration: none; color: #050505;}/*visitado*/
-a.atividade:focus { text-decoration: none;  color:#000000;}/*foco selecionado*/
-a.atividade:hover { text-decoration: underline;  color:#cc0000;}/*quando a seta ta em cima*/
-a.atividade:active { text-decoration: none; color:#cc3333;}/*quando clicado*/
-
-a.menu:link{ text-decoration: none; color:#ffffff;} /*normal*/
-a.menu:visited { text-decoration: none; color: #ffffff;}/*visitado*/
-a.menu:focus { text-decoration: none;  color:#ffffff;}/*foco selecionado*/
-a.menu:hover { text-decoration: underline;  color:#ffffff;}/*quando a seta ta em cima*/
-a.menu:active { text-decoration: none; color:#ffffff;}/*quando clicado*/
-
-a.az:link{ text-decoration: none; color:#99ffff;}
-a.az:visited { text-decoration: none; color:#ccc;}
-a.az:focus { text-decoration: none;  color:#99ffff;}
-a.az:hover { text-decoration: underline;  color:#99ffff;}
-a.az:active { text-decoration: none; color:#99ffff;}
-
-a.cz:link{ text-decoration: none; color:#333333;}
-a.cz:visited { text-decoration: none; color:#666666;}
-a.cz:focus { text-decoration: none;  color:#333333;}
-a.cz:hover { text-decoration: underline;  color:#333333;}
-a.cz:active { text-decoration: none; color:#333333;}
-
-a.azesc:link{ font-weight:bold; text-decoration: underline; color:#000238;}
-a.azesc:visited { font-weight:bold; text-decoration: underline; color:#666666;}
-a.azesc:focus { font-weight:bold; text-decoration: underline; color:#000238;}
-a.azesc:hover { font-weight:bold; text-decoration: none; color:#000238;}
-a.azesc:active { font-weight:bold; text-decoration: underline; color:#000238;}
-
-
-.negrito {font-weight:bold;}
-.italico {font-style:italic;}
-.destaque {font-style:italic; }
-.destaqueverm {font-weight:bold; color:#CC0000; }
-.center {text-align:center; margin: auto;}
-.text-center {text-align: center; margin: auto;}
-
-h1 { margin:0; padding: 0;}
-
-h2 { 
-
-	background-color:#00afc4;
-	text-align:center;
-	min-width: 252px;
-	width:19%;
-	color: #FFFFFF;
-	margin: 0 auto;
-	margin-bottom: 20px;
-	font-weight: normal; }
-
-	h3 { color: #000238; }
-	h3.jobs1 { color: #000; font-weight:bold; }
-
-	.text-left {text-align:left;}
-
-	.titulo {width: 100%;  margin: 0 auto; padding: 0; text-align:center;}
-
-	.textointro { color:#000238; }
-
-	.descricaoempresa { text-align: left;}
-
-	.text-uppercase {text-transform: uppercase;}
-	/*------ Container ------- */
-
-	#container {
-		width: 100%;
-		min-height: 100%;
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		position: relative;
-
-	}
-
-	* html #container {
-		height: 100%; /* hack para IE6 que trata height como min-height */
-	}
-
-
-	.maxwidth {
-		width: 100%;
-		max-width: 1440px;
-		margin: 0 auto;
-		position: relative;
-		padding:0;
-		clear: both;
-	}
-
-	.mt-5 {margin-top: 50px;}
-
-
-	/*------ Top ------- */
-
-	#top {
-		width: 100%;
-		max-width:100%;
-		height: auto;
-		margin:0;
-		padding:0;
-		text-align:center;
-
-	}
-
-	#acessibilidade{
-		width: 90%;
-		padding: 6px 5% 2px 5%;
-		margin: 0;
-		background-color: #eeeee4;
-		text-align:center;
-
-
-	}
-
-	.left {
-		float: left;
-		display: inline;
-		position:relative;
-		width: auto;
-		height: auto;
-		margin:0;
-		padding:0;
-	}
-
-	@media only screen and (min-width:769px), screen and (min-device-width:769px) {
-
-		.center {
-			text-align:center;
-			margin: 0 30px 0 50px;
-			float: left;
-			display: inline;
-			position:relative;
-			height: auto;
-
-		}
-	}
-
-	@media only screen and (max-width:768px), screen and (max-device-width:768px) {
-
-		.center {
-			text-align:center;
-			margin: 0 10px 0 20px;
-			float: left;
-			display: inline;
-			position:relative;
-			height: auto;
-
-		}
-	}
-
-	.right {
-		width: auto;
-		height: auto;
-		float: right;
-		display: inline;
-		position:relative;
-		margin:0;
-		padding:0;
-
-	}
-
-	a.tamfonte{
-		background-color:#f9f9f9;
-		color:#333333;
-		text-decoration: none;
-		padding:8px;
-		margin:3px 5px 0 0;
-		border: 1px solid #c6c6c6;
-		border-radius: 50%;
-		font-weight:bold;
-	}
-
-	a.tamfonte:hover {
-		background-color:#000000;
-		color:#FFFFFF;
-		text-decoration: none;
-		padding:8px;
-		margin:3px 5px 0 0;
-		border: 1px solid #000;
-		border-radius: 50%;
-		font-weight:bold;
-	}
-
-	/*------ Menu ------- */
-
-
-	#menu {
-
-		width: 94.375%;
-		padding: 20px 2.8125% 15px 2.8125%;
-		margin:0;
-		background-color: #fff;
-		display:inline;
-		float:left;
-		text-align:center;
-
-	}
-
-
-	#menu ul {
-
-		margin: 0;
-		padding: 0;
-		list-style-type: none;
-	}
-
-	#menu li {
-
-		display: inline;
-		padding:0 0.6%;
-		margin: 0;
-	}
-
-	#menu li a {
-
-		font-family: 'Droid Sans', sans-serif;
-		color:#000;
-		padding:0.6% 0.7%;
-		text-decoration: none;
-
-	}
-
-	#menu li a:hover, #menu li a:focus {
-
-		font-family: 'Droid Sans', sans-serif;
-		color:#000;
-		text-decoration: none;
-		padding:0.6% 0.7%;
-		border-radius: 6px;
-		background-color:#40C7DC;
-	}
-
-
-
-	/*------ header ------- */
-
-	header {
-
-		width: 100%;
-		max-width: 1440px;
-		height: auto;
-		margin:0;
-		padding:0;
-		display:inline;
-		position:relative;
-		background-color:#e6e6dc;
-		text-align:center;
-	}
-
-
-	.textotop {
-
-		width:90%; /* 243px/1280 */
-		height:auto;
-		text-align:center;
-		color:#FFFFFF;
-		float:left;
-		margin: 0 5%;
-		position: absolute;
-		z-index:10;  
-	}
-
-	.divimg {
-		width: 100%;
-		max-width: 1440px;
-		height:auto;
-		max-height: 343px;
-		position:relative;
-		float: left;
-		display:inline;
-		margin:0;
-		padding:0;
-	}
-
-	.faixavisual {
-		width: 100%;
-		height:auto;
-		max-height: 343px;
-		padding:0;
-		margin:0;
-	}
-
-	/*------ Atividades ------- */
-
-	#atividade .img-container, #parceiros .img-container  {
-		min-height: 100px;
-		padding: 0 10px;
-		text-align: center;
-		border-radius: 4px;
-		border: 1px solid #cecece;
-		margin-top: 20px;
-	}
-
-	/*------ Conteúdo ------- */
-
-	.logopremio {max-width: 250px; height:auto; margin: 25px auto;}
-
-	#conteudopag {
-
-		width: 90%;
-		padding: 30px 3% 10px 3%;
-		height: auto;
-		margin: 30px 2% 30px 2%;
-		min-height: 200px;
-		background-color:#fff;
-		float:left;
-		display:inline;
-		position:relative;
-	}
-
-	hr {
-		width: 100%;
-		border: 1px dotted #CCCCCC;
-		margin: 16px 0;
-	}
-
-	.foto {
-		width: 100%;
-		height:auto;
-		border-radius: 8px;}
-
-		.foto2 {
-			width: 40%;
-			max-width: 274px;
-			height:auto;
-			float: left;
-			margin-right: 4%; 
-			border-radius: 8px;}
-
-			a.linkdestaque {
-
-				color: #ffffff;
-				padding:12px 16px;
-				border: 0px;
-				margin-right: 5px;
-				font-size: 1em;
-				background-color: #cc3333;
-				border-radius: 8px;
-				text-decoration: none;
-			}
-
-			a.linkdestaque:hover {
-
-				color: #ffffff;
-				padding:12px 16px;
-				border: 0px;
-				margin-right: 5px;
-				font-size: 1em;
-				background-color: #9e0000;
-				border-radius: 8px;
-				text-decoration: underline;
-
-			}
-
-			/*------ Conteúdo Home ------- */
-
-			.oquefazemos {
-				width: 100%;
-				padding: 60px 0 0 0;
-			}
-
-			.moduli {
-				width: 100%;
-				padding: 60px 0 0 0;
-
-			}
-
-			.outrosservicos {
-				width: 100%;
-				padding: 30px 0 0 0;
-			}
-
-
-			hr.pq {
-				width: 65%;
-				border: 1px dotted #CCCCCC;
-				margin: 10px 0;
-			}
-
-			hr.pq2 {
-				width: 60%;
-				border: 1px dotted #CCCCCC;
-				margin: 10px 0;
-			}
-
-			hr.pq3 {
-				width: 44%;
-				border: 1px dotted #CCCCCC;
-				margin: 10px 0;
-			}
-
-
-			.esquerda {
-				float: left;
-				display: inline;
-				position:relative;
-				width: 42%;
-				height: auto;
-				margin:0;
-				padding:0 3% 0 0;
-			}
-
-			.direita {
-				float: right;
-				display: inline;
-				position:relative;
-				width: 52%;
-				height: auto;
-				margin:0;
-				padding: 0 0 0 3%;
-			}
-
-			.centro{
-				text-align: center;
-			}
-
-			.ilustracao {
-				width: 27.32%;
-				height: auto;
-				margin-right: 4.5%;
-				margin-bottom: 20px;
-				float:left;
-				display:inline;
-				max-width: 181px;
-			}
-
-			.ilustracao2 {
-				width: 33%;
-				height: auto;
-				margin-right: 4.5%;
-				margin-bottom: 20px;
-				float:left;
-				display:inline;
-				max-width: 181px;
-			}
-
-			.img-fluid {
-				width: 100%;
-				height: auto;
-				margin-bottom: 20px;
-			}
-
-			.botao-moduli, .botao-moduli:visited {
-
-				color: #fff;
-				background-color: #1192d3;
-				border-color: #007bff;
-				padding: .5rem 1rem;
-				font-size: 1rem;
-				line-height: 1.5;
-				border-radius: .3rem;
-				font-weight: 400;
-				text-align: center;
-				white-space: nowrap;
-				vertical-align: middle;
-				Text-decoration: none !important;
-				transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-			}
-
-			.botao-moduli:hover, .botao-moduli:focus { background-color: #000000;}
-
-			#qdroserv {
-				width: 82.2%;
-				padding: 30px 8.9% 0 8.9%;
-				height: auto;
-				background-color: #f3f3ec;
-				position:relative;
-			}
-
-			#qdroserv li {
-				width: 100%;
-				border-bottom: 1px #d0d0c7 solid;
-				padding: 8px 0;
-				margin: 0;
-				list-style-image:url(../imagens/seta_preta.png);
-				list-style-position:inside;
-
-			}
-
-			.servicobottom {
-				width: 100%;
-				padding: 1% 0;
-				position:absolute;
-				bottom: 0;
-				left: 0;
-				background-color: #e5e5dd;
-				text-align:center;
-			}
-
-
-			.noticiashome {
-				float: left;
-				display: inline;
-				position:relative;
-				width: 40%; /* 508px/1325 */
-				height: auto;
-				padding: 0 5%; 
-				text-align:left;
-				margin: 10px auto;
-			}
-
-			.fotonoticiashome {
-
-				width: 92%;
-				height:auto;
-				padding: 4%;
-				border: 1px #cccccc solid;
-				margin: 10px auto;
-			}
-
-
-
-			/*------ Quem Somos ------- */
-
-			#qdroempresas {
-				width: 90%;
-				padding: 30px 5% 0 5%;
-				height: auto;
-				min-height: 400px;
-				background-color: #f3f3ec;
-				position:relative;
-			}
-
-			.fotoTexto {
-
-				width: 50%;
-				height:auto;
-				padding: 4%;
-				border: 1px #cccccc solid;
-				margin: 10px auto;
-			}
-
-
-
-			.empresa {
-				width: 28%;
-				margin: 1.5%;
-				background-color:#FFFFFF;
-				padding: 1.1%;
-				min-height: 60px;
-				display:inline;
-				float:left;
-				border-radius: 8px;
-				text-align:center;
-			}
-
-			.logo {
-				width: 96%;
-				height:auto;
-				max-width: 275px;
-			}
-
-			.logo2 {
-				width: 46%;
-				margin: 0 25%;
-				height:auto;
-				max-width: 275px;
-			}
-
-			hr.logos {
-				width: 100%;
-				border: 1px dotted #CCCCCC;
-				margin: 5px 0;
-				text-align:center;
-			}
-
-			.titempresa {
-				font-size: 1.125em;
-				font-weight:bold;
-				line-height:1em;
-			}
-
-			.txtempresa {
-				font-size: 0.875em;
-				line-height: 0.9em;
-
-			}
-
-			hr.proj {
-				width: 80%;
-				border: 1px dotted #CCCCCC;
-				margin: 5px 0;
-			}
-
-
-			.fprojeto {
-				width: 15%;
-				height: auto;
-				margin-right: 3%;
-				margin-bottom: 10px;
-				max-width: 207px;
-				float:left;
-				display:inline;
-			}
-
-			.oprojeto { 
-				margin: 40px 0 50px 0; 
-				background-color: #f3f3ec;
-				padding: 3%;}
-
-				.esquerda2 {
-					float: left;
-					display: inline;
-					position:relative;
-					width: 52%;
-					height: auto;
-					margin:0;
-					padding:0 3% 0 0;
-				}
-
-				.direita2 {
-					float: right;
-					display: inline;
-					position:relative;
-					width: 42%;
-					height: auto;
-					margin:0;
-					padding: 0 0 0 3%;
-				}
-
-				.fpremio {
-					width: 25%;
-					height: auto;
-					margin-right: 3%;
-					margin-bottom: 10px;
-					max-width: 498px;
-					float:left;
-					display:inline;
-				}
-
-
-				/*------ Serviços ------- */
-
-
-				#qdrocor {
-					width: 90%;
-					padding: 30px 5% 0 5%;
-					height: auto;
-					background-color: #fff;
-					position:relative;
-					border-radius:10px;
-					border: 2px #CCCCCC solid;
-				}
-
-
-				.esquerda3 {
-					float: left;
-					display: inline;
-					position:relative;
-					width: 46%;
-					height: auto;
-					margin:0;
-					padding:0 4% 0 0;
-				}
-
-				.direita3 {
-					float: right;
-					display: inline;
-					position:relative;
-					width: 46%;
-					height: auto;
-					margin:0;
-					padding: 0 0 0 4%;
-				}
-
-				/*------ Acessibilidade na Web ------- */
-
-				.fotoconteudo {
-					width: 42%;
-					height: auto;
-					margin-right: 3%;
-					margin-bottom: 20px;
-					float:left;
-					display:inline;
-					max-width: 400px;
-					border-radius: 12px;
-					border: 1px #999 solid;
-				}
-
-				.capacartilha {
-					width: 15%;
-					height: auto;
-					margin-right: 3%;
-					margin-bottom: 20px;
-					float:left;
-					display:inline;
-					max-width: 250px;
-				}
-
-
-				/*------ Serviços ------- */
-
-				.navegadores {
-					width: 40%;
-					height: auto;
-					display:inline;
-					max-width: 500px;
-				}
-
-				/*------ Portfolio ------- */
-
-				.jobs {
-					width: 100%;
-					height: auto;
-					margin-bottom: 20px;
-					border-bottom: 1px #ccc solid;
-					padding:30px 0;
-					position:relative;
-					min-height: 380px;
-				}
-
-				.fotonoticias {
-					width: 50%;
-					max-width: 500px;
-					height:auto;
-					margin-right: 4%;
-					margin-bottom: 20px;
-					float: left;
-					display: inline;
-					position:relative;
-				}
-
-
-				/*------ Equipe ------- */
-
-
-				.qdroequipe {
-					width: 26%;
-					margin: 20px 1.6%; 
-					background-color: #f3f3ec;
-					padding: 20px 2%;
-					float:left;
-					display:inline;
-					text-align: center;}
-
-					.qdroequipe1 {
-						width: 42%;
-						margin: 20px 1.5%; 
-						background-color: #f3f3ec;
-						padding: 20px 2%;
-						float:left;
-						display:inline;
-						text-align: center;}
-
-						.equipe1 {
-							width: 42%;
-							margin: 1.5%;
-							background-color:#FFFFFF;
-							padding: 1%;
-							min-height: 60px;
-							display:inline;
-							float:left;
-							border-radius: 8px;
-							text-align:center;
-						}
-
-
-						.equipe {
-							width: 28%;
-							margin: 1.5%;
-							background-color:#FFFFFF;
-							padding: 1%;
-							min-height: 60px;
-							display:inline;
-							float:left;
-							border-radius: 8px;
-							text-align:center;
-						}
-
-
-						.prof1 {
-							width: 48%;
-							margin: 10px 1%;
-							float:left;
-							display: inline;
-							height: auto;
-							min-height: 120px;
-						}
-
-						.prof {
-							width: 48%;
-							margin: 10px 1%;
-							display: inline;
-							height: auto;
-							min-height: 120px;
-						}
-
-						.fotoequipe {
-							display: inline;
-							width: 90%;
-							margin: auto;
-							height: auto;
-						}
-
-						.qdrparceiros {
-							width: 28%;
-							padding: 10px 1%;
-							margin: 1.4%;
-							min-height: 250px;
-							float: left;
-							display: inline;
-							height: auto;
-							background-color: #fff;
-							position:relative;
-							border-radius:10px;
-							border: 2px #CCCCCC solid;
-						}
-
-						/*------ Contato ------- */
-
-						table {border:none; width: 90%;}
-						table.trabalhe {border:none; width: 100%;}
-						td {padding: 10px 5px;}
-						fieldset {border:none;}
-
-						.campo {
-							font-family: 'Droid Sans', sans-serif;
-							color: #333;
-							border: 2px #999 solid;
-							background-color: #fff;
-							height: 24px;
-							padding: 4px;
-							font-size: 1em;
-							border-radius: 8px;
-						}
-
-						.campo2 {
-							font-family: 'Droid Sans', sans-serif;
-							color: #333;
-							background-color: #fff;
-							border: 2px #999 solid;
-							padding: 8px;
-							font-size: 1em;
-							border-radius: 8px;
-
-
-						}
-
-						.botaoenviar {
-
-							color: #ffffff;
-							padding:8px 14px;
-							border: 0px;
-							margin-right: 5px;
-							font-size: 1em;
-							background-color: #cc3333;
-						}
-
-						.botaoenviar:hover {
-
-							color: #ffffff;
-							padding:8px 14px;
-							border: 0px;
-							margin-right: 5px;
-							font-size: 1em;
-							background-color: #9e0000;
-
-						}
-
-						.botaolimpar {
-
-							background-color: #fff;
-							border: 1px solid #CCCCCC;
-							color: #333333;
-							padding:8px 14px;
-							margin-right: 5px;
-							font-size: 1em;
-
-						}
-
-						/*------ Trabalhe Conosco ------- */
-
-						.radio {border:4px solid #333; border-radius: 18px;}
-
-						table.defic td {border-bottom: 1px solid #CCC; margin:0;}
-
-						/*------ Acessibilidade do Site ------- */
-
-						.qdroacesso {
-							width: 82.2%;
-							padding: 30px 8.9% 0 8.9%;
-							height: auto;
-							background-color: #f3f3ec;
-							position:relative;
-						}
-
-
-
-						/*------ Mapa do Site ------- */
-
-						.itemmapa {
-							width: 18%;
-							padding: 10px 1%;
-							height: auto;
-							float: left;
-							display:inline;
-							min-height: 250px;
-							margin-bottom: 30px;
-						} 
-
-
-						.itemmapa2 {
-							width: 24%;
-							padding: 10px 1%;
-							height: auto;
-							float: left;
-							display:inline;
-							min-height: 250px;
-							margin-bottom: 30px;
-						}
-
-						.titmapa {
-							width: 100%;
-							font-weight: bold;
-							padding: 5px 0;
-							text-align: center;
-							margin: auto;
-						}
-
-
-						/*------ rodape ------- */
-
-
-						footer {
-							width: 94%;
-							max-width: 1440px;
-							padding: 1.8% 3%;
-							margin: 0;
-							height: auto;
-							min-height: 150px;
-							background-color:#05054d;
-							color:#FFFFFF;
-							float:left;
-							display:inline;
-
-						}
-
-						.destaquebottom {
-							font-weight:bold;
-						}
-
-						.infocontato {
-
-							width: auto;
-							float:left;
-							margin-right: 3%;
-							display:inline;
-
-						}
-
-						.selos {
-
-							width: 30%;
-							float:right;
-							display:inline;
-							text-align:right;
-
-						}
-
-						.acessoparatodos {
-							float:right;
-							width: 41%;
-							max-width: 547px;
-							height:auto;
-							border:none;
-							margin-top: 10px;
-						}
-
-						#addthis {
-							font-family: 'Droid Sans', sans-serif;
-							float:left;
-							margin: 12px 0 12px 0;
-
-						}
-
-						.icon-redes-sociais {max-width: 40px; height: auto; margin: 0 10px; float: right; position: relative;}
-
-						.quadro-reserva {width: 80%; margin: auto; display:block;}
-						@media (min-width: 1024px) { .quadro-reserva { width: 60%; margin: auto; display:block;} }
-
-						.quadro-plano {float: none; display: block; width: 90%; margin: 30px auto;}
-						@media (min-width: 769px) {.quadro-plano {float: left; display: inline; width: 40%;} }
-
-						.quadro-plano-right {float: none; display: block; width: 90%; margin: 30px auto;}
-						@media (min-width: 769px) {.quadro-plano-right {float: right; display: inline; width: 40%;} }
-
-
-						.campo-reserva {max-width: 80%;}
-						@media (min-width: 769px) {.campo-reserva {width: 70%;} }
+a.mapa:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/*visitado*/
+
+a.mapa:focus {
+    text-decoration: none;
+    color: #cc0000;
+}
+
+
+/*foco selecionado*/
+
+a.mapa:hover {
+    text-decoration: underline;
+    color: #cc0000;
+}
+
+
+/*quando a seta ta em cima*/
+
+a.mapa:active {
+    text-decoration: none;
+    color: #cc0000;
+}
+
+
+/*quando clicado*/
+
+a.noticia:link {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/*normal*/
+
+a.noticia:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/*visitado*/
+
+a.noticia:focus {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/*foco selecionado*/
+
+a.noticia:hover {
+    text-decoration: underline;
+    color: rgb(77, 2, 2);
+}
+
+
+/*quando a seta ta em cima*/
+
+a.noticia:active {
+    text-decoration: underline;
+    color: #000;
+}
+
+
+/*quando clicado*/
+
+a.atividade:link {
+    text-decoration: none;
+    color: #050505;
+}
+
+
+/*normal*/
+
+a.atividade:visited {
+    text-decoration: none;
+    color: #050505;
+}
+
+
+/*visitado*/
+
+a.atividade:focus {
+    text-decoration: none;
+    color: #000000;
+}
+
+
+/*foco selecionado*/
+
+a.atividade:hover {
+    text-decoration: underline;
+    color: #cc0000;
+}
+
+
+/*quando a seta ta em cima*/
+
+a.atividade:active {
+    text-decoration: none;
+    color: #cc3333;
+}
+
+
+/*quando clicado*/
+
+a.menu:link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/*normal*/
+
+a.menu:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/*visitado*/
+
+a.menu:focus {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/*foco selecionado*/
+
+a.menu:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+
+/*quando a seta ta em cima*/
+
+a.menu:active {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/*quando clicado*/
+
+a.az:link {
+    text-decoration: none;
+    color: #99ffff;
+}
+
+a.az:visited {
+    text-decoration: none;
+    color: #ccc;
+}
+
+a.az:focus {
+    text-decoration: none;
+    color: #99ffff;
+}
+
+a.az:hover {
+    text-decoration: underline;
+    color: #99ffff;
+}
+
+a.az:active {
+    text-decoration: none;
+    color: #99ffff;
+}
+
+a.cz:link {
+    text-decoration: none;
+    color: #333333;
+}
+
+a.cz:visited {
+    text-decoration: none;
+    color: #666666;
+}
+
+a.cz:focus {
+    text-decoration: none;
+    color: #333333;
+}
+
+a.cz:hover {
+    text-decoration: underline;
+    color: #333333;
+}
+
+a.cz:active {
+    text-decoration: none;
+    color: #333333;
+}
+
+a.azesc:link {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #000238;
+}
+
+a.azesc:visited {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #666666;
+}
+
+a.azesc:focus {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #000238;
+}
+
+a.azesc:hover {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000238;
+}
+
+a.azesc:active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #000238;
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+.italico {
+    font-style: italic;
+}
+
+.destaque {
+    font-style: italic;
+}
+
+.destaqueverm {
+    font-weight: bold;
+    color: #CC0000;
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+    margin: auto;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    background-color: #00afc4;
+    text-align: center;
+    min-width: 252px;
+    width: 19%;
+    color: #FFFFFF;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+h3 {
+    color: #000238;
+}
+
+h3.jobs1 {
+    color: #000;
+    font-weight: bold;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.titulo {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.textointro {
+    color: #000238;
+}
+
+.descricaoempresa {
+    text-align: left;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+
+/*------ Container ------- */
+
+#container {
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+* html #container {
+    height: 100%;
+    /* hack para IE6 que trata height como min-height */
+}
+
+.maxwidth {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+    clear: both;
+}
+
+.mt-5 {
+    margin-top: 50px;
+}
+
+
+/*------ Top ------- */
+
+#top {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#acessibilidade {
+    width: 90%;
+    padding: 6px 5% 2px 5%;
+    margin: 0;
+    background-color: #eeeee4;
+    text-align: center;
+}
+
+.left {
+    float: left;
+    display: inline;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width:769px),
+screen and (min-device-width:769px) {
+    .center {
+        text-align: center;
+        margin: 0 30px 0 50px;
+        float: left;
+        display: inline;
+        position: relative;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width:768px),
+screen and (max-device-width:768px) {
+    .center {
+        text-align: center;
+        margin: 0 10px 0 20px;
+        float: left;
+        display: inline;
+        position: relative;
+        height: auto;
+    }
+}
+
+.right {
+    width: auto;
+    height: auto;
+    float: right;
+    display: inline;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+a.tamfonte {
+    background-color: #f9f9f9;
+    color: #333333;
+    text-decoration: none;
+    padding: 8px;
+    margin: 3px 5px 0 0;
+    border: 1px solid #c6c6c6;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+a.tamfonte:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 8px;
+    margin: 3px 5px 0 0;
+    border: 1px solid #000;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+
+/*------ Menu ------- */
+
+#menu {
+    width: 94.375%;
+    padding: 20px 2.8125% 15px 2.8125%;
+    margin: 0;
+    background-color: #fff;
+    display: inline;
+    float: left;
+    text-align: center;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#menu li {
+    display: inline;
+    padding: 0 0.6%;
+    margin: 0;
+}
+
+#menu li a {
+    font-family: 'Droid Sans', sans-serif;
+    color: #000;
+    padding: 0.6% 0.7%;
+    text-decoration: none;
+}
+
+#menu li a:hover,
+#menu li a:focus {
+    font-family: 'Droid Sans', sans-serif;
+    color: #000;
+    text-decoration: none;
+    padding: 0.6% 0.7%;
+    border-radius: 6px;
+    background-color: #40C7DC;
+}
+
+
+/*------ header ------- */
+
+header {
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    position: relative;
+    background-color: #e6e6dc;
+    text-align: center;
+}
+
+.textotop {
+    width: 90%;
+    /* 243px/1280 */
+    height: auto;
+    text-align: center;
+    color: #FFFFFF;
+    float: left;
+    margin: 0 5%;
+    position: absolute;
+    z-index: 10;
+}
+
+.divimg {
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    max-height: 343px;
+    position: relative;
+    float: left;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.faixavisual {
+    width: 100%;
+    height: auto;
+    max-height: 343px;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*------ Atividades ------- */
+
+#atividade .img-container,
+#parceiros .img-container {
+    min-height: 100px;
+    padding: 0 10px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #cecece;
+    margin-top: 20px;
+}
+
+
+/*------ Conteúdo ------- */
+
+.logopremio {
+    max-width: 250px;
+    height: auto;
+    margin: 25px auto;
+}
+
+#conteudopag {
+    width: 90%;
+    padding: 30px 3% 10px 3%;
+    height: auto;
+    margin: 30px 2% 30px 2%;
+    min-height: 200px;
+    background-color: #fff;
+    float: left;
+    display: inline;
+    position: relative;
+}
+
+hr {
+    width: 100%;
+    border: 1px dotted #CCCCCC;
+    margin: 16px 0;
+}
+
+.foto {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.foto2 {
+    width: 40%;
+    max-width: 274px;
+    height: auto;
+    float: left;
+    margin-right: 4%;
+    border-radius: 8px;
+}
+
+a.linkdestaque {
+    color: #ffffff;
+    padding: 12px 16px;
+    border: 0px;
+    margin-right: 5px;
+    font-size: 1em;
+    background-color: #cc3333;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+a.linkdestaque:hover {
+    color: #ffffff;
+    padding: 12px 16px;
+    border: 0px;
+    margin-right: 5px;
+    font-size: 1em;
+    background-color: #9e0000;
+    border-radius: 8px;
+    text-decoration: underline;
+}
+
+
+/*------ Conteúdo Home ------- */
+
+.oquefazemos {
+    width: 100%;
+    padding: 60px 0 0 0;
+}
+
+.moduli {
+    width: 100%;
+    padding: 60px 0 0 0;
+}
+
+.outrosservicos {
+    width: 100%;
+    padding: 30px 0 0 0;
+}
+
+hr.pq {
+    width: 65%;
+    border: 1px dotted #CCCCCC;
+    margin: 10px 0;
+}
+
+hr.pq2 {
+    width: 60%;
+    border: 1px dotted #CCCCCC;
+    margin: 10px 0;
+}
+
+hr.pq3 {
+    width: 44%;
+    border: 1px dotted #CCCCCC;
+    margin: 10px 0;
+}
+
+.esquerda {
+    float: left;
+    display: inline;
+    position: relative;
+    width: 42%;
+    height: auto;
+    margin: 0;
+    padding: 0 3% 0 0;
+}
+
+.direita {
+    float: right;
+    display: inline;
+    position: relative;
+    width: 52%;
+    height: auto;
+    margin: 0;
+    padding: 0 0 0 3%;
+}
+
+.centro {
+    text-align: center;
+}
+
+.ilustracao {
+    width: 27.32%;
+    height: auto;
+    margin-right: 4.5%;
+    margin-bottom: 20px;
+    float: left;
+    display: inline;
+    max-width: 181px;
+}
+
+.ilustracao2 {
+    width: 33%;
+    height: auto;
+    margin-right: 4.5%;
+    margin-bottom: 20px;
+    float: left;
+    display: inline;
+    max-width: 181px;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.botao-moduli,
+.botao-moduli:visited {
+    color: #fff;
+    background-color: #1192d3;
+    border-color: #007bff;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    Text-decoration: none !important;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.botao-moduli:hover,
+.botao-moduli:focus {
+    background-color: #000000;
+}
+
+#qdroserv {
+    width: 82.2%;
+    padding: 30px 8.9% 0 8.9%;
+    height: auto;
+    background-color: #f3f3ec;
+    position: relative;
+}
+
+#qdroserv li {
+    width: 100%;
+    border-bottom: 1px #d0d0c7 solid;
+    padding: 8px 0;
+    margin: 0;
+    list-style-image: url(../imagens/seta_preta.png);
+    list-style-position: inside;
+}
+
+.servicobottom {
+    width: 100%;
+    padding: 1% 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #e5e5dd;
+    text-align: center;
+}
+
+.noticiashome {
+    float: left;
+    display: inline;
+    position: relative;
+    width: 40%;
+    /* 508px/1325 */
+    height: auto;
+    padding: 0 5%;
+    text-align: left;
+    margin: 10px auto;
+}
+
+.fotonoticiashome {
+    width: 92%;
+    height: auto;
+    padding: 4%;
+    border: 1px #cccccc solid;
+    margin: 10px auto;
+}
+
+
+/*------ Quem Somos ------- */
+
+#qdroempresas {
+    width: 90%;
+    padding: 30px 5% 0 5%;
+    height: auto;
+    min-height: 400px;
+    background-color: #f3f3ec;
+    position: relative;
+}
+
+.fotoTexto {
+    width: 50%;
+    height: auto;
+    padding: 4%;
+    border: 1px #cccccc solid;
+    margin: 10px auto;
+}
+
+.empresa {
+    width: 28%;
+    margin: 1.5%;
+    background-color: #FFFFFF;
+    padding: 1.1%;
+    min-height: 60px;
+    display: inline;
+    float: left;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.logo {
+    width: 96%;
+    height: auto;
+    max-width: 275px;
+}
+
+.logo2 {
+    width: 46%;
+    margin: 0 25%;
+    height: auto;
+    max-width: 275px;
+}
+
+hr.logos {
+    width: 100%;
+    border: 1px dotted #CCCCCC;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.titempresa {
+    font-size: 1.125em;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.txtempresa {
+    font-size: 0.875em;
+    line-height: 0.9em;
+}
+
+hr.proj {
+    width: 80%;
+    border: 1px dotted #CCCCCC;
+    margin: 5px 0;
+}
+
+.fprojeto {
+    width: 15%;
+    height: auto;
+    margin-right: 3%;
+    margin-bottom: 10px;
+    max-width: 207px;
+    float: left;
+    display: inline;
+}
+
+.oprojeto {
+    margin: 40px 0 50px 0;
+    background-color: #f3f3ec;
+    padding: 3%;
+}
+
+.esquerda2 {
+    float: left;
+    display: inline;
+    position: relative;
+    width: 52%;
+    height: auto;
+    margin: 0;
+    padding: 0 3% 0 0;
+}
+
+.direita2 {
+    float: right;
+    display: inline;
+    position: relative;
+    width: 42%;
+    height: auto;
+    margin: 0;
+    padding: 0 0 0 3%;
+}
+
+.fpremio {
+    width: 25%;
+    height: auto;
+    margin-right: 3%;
+    margin-bottom: 10px;
+    max-width: 498px;
+    float: left;
+    display: inline;
+}
+
+#qdrocor {
+    width: 90%;
+    padding: 30px 5% 0 5%;
+    height: auto;
+    background-color: #fff;
+    position: relative;
+    border-radius: 10px;
+    border: 2px #CCCCCC solid;
+}
+
+.esquerda3 {
+    float: left;
+    display: inline;
+    position: relative;
+    width: 46%;
+    height: auto;
+    margin: 0;
+    padding: 0 4% 0 0;
+}
+
+.direita3 {
+    float: right;
+    display: inline;
+    position: relative;
+    width: 46%;
+    height: auto;
+    margin: 0;
+    padding: 0 0 0 4%;
+}
+
+
+/*------ Acessibilidade na Web ------- */
+
+.fotoconteudo {
+    width: 42%;
+    height: auto;
+    margin-right: 3%;
+    margin-bottom: 20px;
+    float: left;
+    display: inline;
+    max-width: 400px;
+    border-radius: 12px;
+    border: 1px #999 solid;
+}
+
+.capacartilha {
+    width: 15%;
+    height: auto;
+    margin-right: 3%;
+    margin-bottom: 20px;
+    float: left;
+    display: inline;
+    max-width: 250px;
+}
+
+.navegadores {
+    width: 40%;
+    height: auto;
+    display: inline;
+    max-width: 500px;
+}
+
+.jobs {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-bottom: 1px #ccc solid;
+    padding: 30px 0;
+    position: relative;
+    min-height: 380px;
+}
+
+.fotonoticias {
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    margin-right: 4%;
+    margin-bottom: 20px;
+    float: left;
+    display: inline;
+    position: relative;
+}
+
+.qdroequipe {
+    width: 26%;
+    margin: 20px 1.6%;
+    background-color: #f3f3ec;
+    padding: 20px 2%;
+    float: left;
+    display: inline;
+    text-align: center;
+}
+
+.qdroequipe1 {
+    width: 42%;
+    margin: 20px 1.5%;
+    background-color: #f3f3ec;
+    padding: 20px 2%;
+    float: left;
+    display: inline;
+    text-align: center;
+}
+
+.equipe1 {
+    width: 42%;
+    margin: 1.5%;
+    background-color: #FFFFFF;
+    padding: 1%;
+    min-height: 60px;
+    display: inline;
+    float: left;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.equipe {
+    width: 28%;
+    margin: 1.5%;
+    background-color: #FFFFFF;
+    padding: 1%;
+    min-height: 60px;
+    display: inline;
+    float: left;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.prof1 {
+    width: 48%;
+    margin: 10px 1%;
+    float: left;
+    display: inline;
+    height: auto;
+    min-height: 120px;
+}
+
+.prof {
+    width: 48%;
+    margin: 10px 1%;
+    display: inline;
+    height: auto;
+    min-height: 120px;
+}
+
+.fotoequipe {
+    display: inline;
+    width: 90%;
+    margin: auto;
+    height: auto;
+}
+
+.qdrparceiros {
+    width: 28%;
+    padding: 10px 1%;
+    margin: 1.4%;
+    min-height: 250px;
+    float: left;
+    display: inline;
+    height: auto;
+    background-color: #fff;
+    position: relative;
+    border-radius: 10px;
+    border: 2px #CCCCCC solid;
+}
+
+
+/*------ Contato ------- */
+
+table {
+    border: none;
+    width: 90%;
+}
+
+table.trabalhe {
+    border: none;
+    width: 100%;
+}
+
+td {
+    padding: 10px 5px;
+}
+
+fieldset {
+    border: none;
+}
+
+.campo {
+    font-family: 'Droid Sans', sans-serif;
+    color: #333;
+    border: 2px #999 solid;
+    background-color: #fff;
+    height: 24px;
+    padding: 4px;
+    font-size: 1em;
+    border-radius: 8px;
+}
+
+.campo2 {
+    font-family: 'Droid Sans', sans-serif;
+    color: #333;
+    background-color: #fff;
+    border: 2px #999 solid;
+    padding: 8px;
+    font-size: 1em;
+    border-radius: 8px;
+}
+
+.botaoenviar {
+    color: #ffffff;
+    padding: 8px 14px;
+    border: 0px;
+    margin-right: 5px;
+    font-size: 1em;
+    background-color: #cc3333;
+}
+
+.botaoenviar:hover {
+    color: #ffffff;
+    padding: 8px 14px;
+    border: 0px;
+    margin-right: 5px;
+    font-size: 1em;
+    background-color: #9e0000;
+}
+
+.botaolimpar {
+    background-color: #fff;
+    border: 1px solid #CCCCCC;
+    color: #333333;
+    padding: 8px 14px;
+    margin-right: 5px;
+    font-size: 1em;
+}
+
+.radio {
+    border: 4px solid #333;
+    border-radius: 18px;
+}
+
+table.defic td {
+    border-bottom: 1px solid #CCC;
+    margin: 0;
+}
+
+
+/*------ Acessibilidade do Site ------- */
+
+.qdroacesso {
+    width: 82.2%;
+    padding: 30px 8.9% 0 8.9%;
+    height: auto;
+    background-color: #f3f3ec;
+    position: relative;
+}
+
+
+/*------ Mapa do Site ------- */
+
+.itemmapa {
+    width: 18%;
+    padding: 10px 1%;
+    height: auto;
+    float: left;
+    display: inline;
+    min-height: 250px;
+    margin-bottom: 30px;
+}
+
+.itemmapa2 {
+    width: 24%;
+    padding: 10px 1%;
+    height: auto;
+    float: left;
+    display: inline;
+    min-height: 250px;
+    margin-bottom: 30px;
+}
+
+.titmapa {
+    width: 100%;
+    font-weight: bold;
+    padding: 5px 0;
+    text-align: center;
+    margin: auto;
+}
+
+
+/*------ rodape ------- */
+
+footer {
+    width: 94%;
+    max-width: 1440px;
+    padding: 1.8% 3%;
+    margin: 0;
+    height: auto;
+    min-height: 150px;
+    background-color: #05054d;
+    color: #FFFFFF;
+    float: left;
+    display: inline;
+}
+
+.destaquebottom {
+    font-weight: bold;
+}
+
+.infocontato {
+    width: auto;
+    float: left;
+    margin-right: 3%;
+    display: inline;
+}
+
+.selos {
+    width: 30%;
+    float: right;
+    display: inline;
+    text-align: right;
+}
+
+.acessoparatodos {
+    float: right;
+    width: 41%;
+    max-width: 547px;
+    height: auto;
+    border: none;
+    margin-top: 10px;
+}
+
+#addthis {
+    font-family: 'Droid Sans', sans-serif;
+    float: left;
+    margin: 12px 0 12px 0;
+}
+
+.icon-redes-sociais {
+    max-width: 40px;
+    height: auto;
+    margin: 0 10px;
+    float: right;
+    position: relative;
+}
+
+.quadro-reserva {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    .quadro-reserva {
+        width: 60%;
+        margin: auto;
+        display: block;
+    }
+}
+
+.quadro-plano {
+    float: none;
+    display: block;
+    width: 90%;
+    margin: 30px auto;
+}
+
+@media (min-width: 769px) {
+    .quadro-plano {
+        float: left;
+        display: inline;
+        width: 40%;
+    }
+}
+
+.quadro-plano-right {
+    float: none;
+    display: block;
+    width: 90%;
+    margin: 30px auto;
+}
+
+@media (min-width: 769px) {
+    .quadro-plano-right {
+        float: right;
+        display: inline;
+        width: 40%;
+    }
+}
+
+.campo-reserva {
+    max-width: 80%;
+}
+
+@media (min-width: 769px) {
+    .campo-reserva {
+        width: 70%;
+    }
+}

@@ -118,7 +118,7 @@
 
                     <!--==== Noticia 2 ====-->
                     <div class="jobs">
-                        <a href="noticias/noticia2.php" alt="Testando o alt" title="Testando o title">
+                        <a href="noticias/noticia2.php" alt="Conheça funcionalidades para pessoas com deficiência visual" title="Conheça funcionalidades para pessoas com deficiência visual">
                             <img src="imagens/noticia2.jpg" alt="Logo da Microsoft com um fundo azul" width="500" height="386" class="fotonoticias" />
                         </a>
                         <a href="#" class="noticia">
@@ -133,8 +133,8 @@
                     </div><!-- Fecha Jobs -->
 
                     <div class="jobs">
-                        <a href="noticias/noticia3.php" alt="Testando o alt" title="Testando o title">
-                            <img src="imagens/noticia3.jpg" alt="Testando o alt" width="500" height="386" class="fotonoticias" />
+                        <a href="noticias/noticia3.php" alt="Conheça ideias incríveis de startups que ajudam pessoas com deficiência" title="Conheça ideias incríveis de startups que ajudam pessoas com deficiência">
+                            <img src="imagens/noticia3.jpg" alt="Várias pessoas sentadas e encostadas sobre um letreiro grande escrito STARTUP." width="500" height="386" class="fotonoticias" />
                         </a>
                         <a href="noticias/noticia3.php" class="noticia">
                             <h3 class="jobs1">Conheça ideias incríveis de startups que ajudam pessoas com deficiência</h3>
@@ -150,8 +150,8 @@
 
                     <!--==== Noticia 4 ====-->
                     <div class="jobs">
-                        <a href="noticias/noticia4.php" alt="Testando o alt" title="Testando o title">
-                            <img src="imagens/noticia4.jpg" alt="Clodoaldo Silva - Blog Parapan de Lima 2019" width="500" height="386" class="fotonoticias" />
+                        <a href="noticias/noticia4.php" alt="Cão-guia representa inclusão social de pessoa com deficiência visual" title="Cão-guia representa inclusão social de pessoa com deficiência visual">
+                            <img src="imagens/noticia4.jpg" alt="Cão guia sentado" width="500" height="386" class="fotonoticias" />
                         </a>
                         <a href="noticias/noticia4.php" class="noticia">
                             <h3 class="jobs1">Cão-guia representa inclusão social de pessoa com deficiência visual</h3>
@@ -167,8 +167,8 @@
                     </div><!-- Fecha Jobs -->
 
                     <div class="jobs">
-                        <a href="noticias/noticia5.php" alt="Testando o alt" title="Testando o title">
-                            <img src="imagens/noticia5.jpg" alt="Clodoaldo Silva - Blog Parapan de Lima 2019" width="500" height="386" class="fotonoticias" />
+                        <a href="noticias/noticia5.php" alt="Servidor com deficiência visual deverá ser movido para local próximo à residência" title="Servidor com deficiência visual deverá ser movido para local próximo à residência">
+                            <img src="imagens/noticia5.jpg" alt="Foto de uma pessoas andando na rua com uma bengala guia" width="500" height="386" class="fotonoticias" />
                         </a>
                         <a href="noticias/noticia5.php" class="noticia">
                             <h3 class="jobs1">Servidor com deficiência visual deverá ser movido para local próximo à residência</h3>
@@ -181,8 +181,8 @@
                         </a>
                     </div><!-- Fecha Jobs -->
                     <div class="jobs">
-                        <a href="noticias/noticia6.php" alt="Testando o alt" title="Testando o title">
-                            <img src="imagens/noticia6.jpg" alt="Clodoaldo Silva - Blog Parapan de Lima 2019" width="500" height="386" class="fotonoticias" />
+                        <a href="noticias/noticia6.php" alt="Com audiodescrição, fãs com deficiência visual curtem o dia do metal no Rock in Rio" title="Com audiodescrição, fãs com deficiência visual curtem o dia do metal no Rock in Rio">
+                            <img src="imagens/noticia6.jpg" alt="Foto de um jovem em um show no rock in rio" width="500" height="386" class="fotonoticias" />
                         </a>
                         <a href="noticias/noticia6.php" class="noticia">
                             <h3 class="jobs1">Com audiodescrição, fãs com deficiência visual curtem o dia do metal no Rock in Rio</h3>

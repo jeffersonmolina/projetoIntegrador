@@ -1,185 +1,287 @@
 @charset "utf-8";
-/* CSS Document */
-
-/*------ Geral ------- */
-
-@media only screen and (min-width:769px), screen and (min-device-width:769px) {
-
-body {
-
-font-size: 1em;
-line-height: 2em;
-
-}
+@media only screen and (min-width:769px),
+screen and (min-device-width:769px) {
+    body {
+        font-size: 1em;
+        line-height: 2em;
+    }
 }
 
-@media only screen and (max-width:768px), screen and (max-device-width:768px) {
-
-body {
-font-size: 0.9em;
-line-height: 1.8em;
+@media only screen and (max-width:768px),
+screen and (max-device-width:768px) {
+    body {
+        font-size: 0.9em;
+        line-height: 1.8em;
+    }
 }
 
+a.azesc:link {
+    font-size: 0.875em;
 }
 
-
-a.azesc:link{ font-size: 0.875em;}
-a.azesc:visited { font-size: 0.875em; }
-a.azesc:focus { font-size: 0.875em; }
-a.azesc:hover {font-size: 0.875em; }
-a.azesc:active {font-size: 0.875em; }
-
-
-
-@media only screen and (min-width:1025px), screen and (min-device-width:1025px) {
-.textotop {font-size: 1.375em; top: 40px; min-height: 90px;}
-.destaque {font-size: 0.9em; line-height: 2em; }
-
+a.azesc:visited {
+    font-size: 0.875em;
 }
 
-@media only screen and (max-width:1024px), screen and (max-device-width:1024px) {
-.textotop {font-size: 1.1em; top: 20px; min-height: 80px; line-height: 1.5em;}
-.destaque {font-size: 0.8em; line-height: 1em;}
-
+a.azesc:focus {
+    font-size: 0.875em;
 }
 
-@media only screen and (max-width:768px), screen and (max-device-width:768px) {
-.textotop {font-size: 0.9em; top: 10px; min-height: 60px; line-height: 1.6em;}
-.destaque {font-size: 0.8em; line-height: 0.9em;}
-
+a.azesc:hover {
+    font-size: 0.875em;
 }
 
+a.azesc:active {
+    font-size: 0.875em;
+}
 
-h2 {font-size: 1.125em; padding: 8px;}
-h2.titulos {font-size: 1.8em; margin: 20px auto; padding: 15px;}
-h2.titulos2 {font-size: 1.8em; margin: 20px auto; padding: 15px; width:30%;}
+@media only screen and (min-width:1025px),
+screen and (min-device-width:1025px) {
+    .textotop {
+        font-size: 1.375em;
+        top: 40px;
+        min-height: 90px;
+    }
+    .destaque {
+        font-size: 0.9em;
+        line-height: 2em;
+    }
+}
 
+@media only screen and (max-width:1024px),
+screen and (max-device-width:1024px) {
+    .textotop {
+        font-size: 1.1em;
+        top: 20px;
+        min-height: 80px;
+        line-height: 1.5em;
+    }
+    .destaque {
+        font-size: 0.8em;
+        line-height: 1em;
+    }
+}
 
-h3 {font-size: 1.25em;}
+@media only screen and (max-width:768px),
+screen and (max-device-width:768px) {
+    .textotop {
+        font-size: 0.9em;
+        top: 10px;
+        min-height: 60px;
+        line-height: 1.6em;
+    }
+    .destaque {
+        font-size: 0.8em;
+        line-height: 0.9em;
+    }
+}
 
-h3.jobs1 {font-size: 1.6em; margin-bottom: 0;}
+h2 {
+    font-size: 1.125em;
+    padding: 8px;
+}
+
+h2.titulos {
+    font-size: 1.8em;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+h2.titulos2 {
+    font-size: 1.8em;
+    margin: 20px auto;
+    padding: 15px;
+    width: 30%;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+h3.jobs1 {
+    font-size: 1.6em;
+    margin-bottom: 0;
+}
 
 .subtitulo {
-font-size: 1.1em;
-line-height: 1.5em;
+    font-size: 1.1em;
+    line-height: 1.5em;
 }
 
-.breadcrumb { font-size: 0.9em;}
-.submenu {font-size: 0.875em;}
-.textointro { font-size: 1.125em; line-height:2em; }
+.breadcrumb {
+    font-size: 0.9em;
+}
 
-.profissional { font-size: 0.9em; font-weight:bold; padding:0; margin:0; line-height:1.1em; }
-.cargo { font-size: 0.875em; padding:0; margin:0; line-height:1.1em;}
-.tipoempresa { font-size: 0.875em; text-align:center; margin: auto; line-height:0.9em; }
-.descricaoempresa { font-size: 0.95em; line-height:1.9em;}
+.submenu {
+    font-size: 0.875em;
+}
+
+.textointro {
+    font-size: 1.125em;
+    line-height: 2em;
+}
+
+.profissional {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    line-height: 1.1em;
+}
+
+.cargo {
+    font-size: 0.875em;
+    padding: 0;
+    margin: 0;
+    line-height: 1.1em;
+}
+
+.tipoempresa {
+    font-size: 0.875em;
+    text-align: center;
+    margin: auto;
+    line-height: 0.9em;
+}
+
+.descricaoempresa {
+    font-size: 0.95em;
+    line-height: 1.9em;
+}
 
 
 /*------ Top ------- */
 
-@media only screen and (min-width:769px), screen and (min-device-width:769px) {
-#acessibilidade{ font-size:0.8125em; height: 34px; }
+@media only screen and (min-width:769px),
+screen and (min-device-width:769px) {
+    #acessibilidade {
+        font-size: 0.8125em;
+        height: 34px;
+    }
 }
 
-@media only screen and (max-width:768px), screen and (max-device-width:768px) {
-#acessibilidade{ font-size:0.7em; height: 34px; }
+@media only screen and (max-width:768px),
+screen and (max-device-width:768px) {
+    #acessibilidade {
+        font-size: 0.7em;
+        height: 34px;
+    }
 }
 
-#top {min-height: 73px; /*-- 108px - 8px acess - 30px menu --*/ }
+#top {
+    min-height: 73px;
+    /*-- 108px - 8px acess - 30px menu --*/
+}
 
 
 /*------ header ------- */
 
-header {max-height: 343px;}
-
-.textotop {max-height: 165px;}
-
-#menu { height:34px; /* 69px */}
-
-
-
-@media only screen and (min-width:1440px), screen and (min-device-width:1440px) {
-#menu li a {
-font-size: 1.1em;
-line-height: 1.3em;
+header {
+    max-height: 343px;
 }
 
-#menu li a:hover {
-font-size: 1.1em;
-line-height: 1.3em;
-
-}
+.textotop {
+    max-height: 165px;
 }
 
-@media only screen and (max-width:1024px), screen and (max-device-width:1024px) {
-
-#menu li a {
-font-size: 0.8em;
-line-height: 1.1em;
+#menu {
+    height: 34px;
+    /* 69px */
 }
 
-#menu li a:hover {
-font-size: 0.8em;
-line-height: 1.1em;
-
+@media only screen and (min-width:1440px),
+screen and (min-device-width:1440px) {
+    #menu li a {
+        font-size: 1.1em;
+        line-height: 1.3em;
+    }
+    #menu li a:hover {
+        font-size: 1.1em;
+        line-height: 1.3em;
+    }
 }
 
+@media only screen and (max-width:1024px),
+screen and (max-device-width:1024px) {
+    #menu li a {
+        font-size: 0.8em;
+        line-height: 1.1em;
+    }
+    #menu li a:hover {
+        font-size: 0.8em;
+        line-height: 1.1em;
+    }
 }
 
-
-@media only screen and (max-width:768px), screen and (max-device-width:768px) {
-
-#menu li a {
-font-size: 0.7em;
-line-height: 1em;
-}
-
-#menu li a:hover {
-font-size: 0.7em;
-line-height: 1em;
-
-}
-
+@media only screen and (max-width:768px),
+screen and (max-device-width:768px) {
+    #menu li a {
+        font-size: 0.7em;
+        line-height: 1em;
+    }
+    #menu li a:hover {
+        font-size: 0.7em;
+        line-height: 1em;
+    }
 }
 
 
 /*------ Home ------- */
 
-
 .articlevazio {
-max-height: 460px;
+    max-height: 460px;
 }
 
 .article {
-max-height: 460px;
-
+    max-height: 460px;
 }
+
 
 /*------ Mapa do Site ------- */
 
-@media only screen and (min-width:1024px), screen and (min-device-width:1024px) {
-
-.titmapa { font-size: 1em; line-height: 1.8em;}
-.itemmapa { font-size: 0.9em; line-height: 1.8em; }
-.itemmapa2 { font-size: 0.9em; line-height: 1.8em; }
+@media only screen and (min-width:1024px),
+screen and (min-device-width:1024px) {
+    .titmapa {
+        font-size: 1em;
+        line-height: 1.8em;
+    }
+    .itemmapa {
+        font-size: 0.9em;
+        line-height: 1.8em;
+    }
+    .itemmapa2 {
+        font-size: 0.9em;
+        line-height: 1.8em;
+    }
 }
 
-@media only screen and (max-width:1023px), screen and (max-device-width:1023px) {
-
-.titmapa { font-size: 0.9em; line-height: 1.6em;}
-.itemmapa { font-size: 0.8em; line-height: 1.4em; }
-.itemmapa2 { font-size: 0.8em; line-height: 1.4em; }
-
+@media only screen and (max-width:1023px),
+screen and (max-device-width:1023px) {
+    .titmapa {
+        font-size: 0.9em;
+        line-height: 1.6em;
+    }
+    .itemmapa {
+        font-size: 0.8em;
+        line-height: 1.4em;
+    }
+    .itemmapa2 {
+        font-size: 0.8em;
+        line-height: 1.4em;
+    }
 }
+
 
 /*------ rodape ------- */
 
-
-.infocontato {font-size: 1.1em;}
-
-footer {
-line-height: 1.8em;
-font-size: 0.812em;
-
+.infocontato {
+    font-size: 1.1em;
 }
 
-.destaquebottom {font-size:1.125em;}
+footer {
+    line-height: 1.8em;
+    font-size: 0.812em;
+}
+
+.destaquebottom {
+    font-size: 1.125em;
+}
