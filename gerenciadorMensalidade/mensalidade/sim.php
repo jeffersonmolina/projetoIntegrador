@@ -102,9 +102,9 @@ if (!empty($_SESSION['id'])) {
                                     <div class="prc-list border rounded border-danger">
                                         <h3>Você deseja realmente excluir?</h3><br />
                                         <form action="../action/delete.php" method="POST">
-                                            <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
-                                            <button type="submit" name="excluirFuncionario" value="Sim" class="btn btn-danger">Sim <i class="fa fa-trash"></i></button>
-                                            <a href="listarFuncionario.php" class="btn btn-secondary">Não <i class="fa fa-arrow-left"></i></a>
+                                            <input type="hidden" name="idMensalidade" value="<?php echo $_GET['idMensalidade']; ?>">
+                                            <button type="submit" name="excluirMensalidade" value="Sim" class="btn btn-danger">Sim <i class="fa fa-trash"></i></button>
+                                            <a href="listarMensalidade.php" class="btn btn-secondary">Não <i class="fa fa-arrow-left"></i></a>
                                         </form>
 
                                     </div>

@@ -1,10 +1,18 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
 <?php
-include_once("../action/db_connect.php");
+//Conexão
+include_once '../action/db_connect.php';
 session_start();
 if (!empty($_SESSION['id'])) {
+    //Select
+    if (isset($_GET['idMensalidade'])) :
+        $idMensalidade = mysqli_escape_string($connect, $_GET['idMensalidade']);
+        $sql = "SELECT * FROM mensalidade WHERE idMensalidade = $idMensalidade";
+        $resultado = mysqli_query($connect, $sql);
+        $dados = mysqli_fetch_array($resultado);
+    endif;
     ?>
-    <!doctype html>
-    <html class="no-js" lang="pt-br">
 
     <head>
         <meta charset="utf-8">
@@ -173,66 +181,64 @@ if (!empty($_SESSION['id'])) {
                 </div>
             </div>
             <div class="main-content-inner">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../index.php">Início</a></li>
-                        <li class="breadcrumb-item"><a href="mensalidade.php">Mensalidades</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Cadastrar mensalidades</li>
-                    </ol>
-                </nav>
-                <h3 class="centro text-center">Cadastrar mensalidades</h3>
+                <h3 class="centro text-center">Editar Mensalidades</h3>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-11 col-sm-11 col-11 col-lg-11 mx-5 py-0 ml-auto">
-                            <form action="../action/create.php" method="POST" autocomplete="off">
+                        <div class="col-md-11 col-sm-11 col-11 col-lg-11 mx-5 ml-auto">
+                            <form action="../action/update.php" method="POST">
+                                <input type="hidden" name="idMensalidade" value="<?php echo $dados['idMensalidade']; ?>">
                                 <div class="form-row">
                                     <div class="form-group col-lg-12">
                                         <label for="nome">Nome:</label>
                                         <select id="nome" name="nome" class="form-control form-control-lg" required>
-                                            <option>Selecione</option>
-                                            <?php
-                                                $sql = "SELECT nome, idAssociadoFisico FROM associadofisico 
-                                                WHERE status = 'ativo'
-                                                ORDER BY nome";
-                                                $res = mysqli_query($connect, $sql);
-                                                while ($row_nome_doador = mysqli_fetch_row($res)) {
-                                                    $vid = $row_nome_doador[0];
-                                                    $vnome = $row_nome_doador[1];
-
-                                                    echo "<option value= $vnome> $vid</option>";
-                                                }
-                                                ?>
+                                            <option>
+                                                <?php
+                                                    if ($dados == 0) {
+                                                        echo "<option value='0'>Escolha um nome</option>";
+                                                    }
+                                                    $sql = "SELECT nome, associadofisico.idAssociadoFisico FROM associadofisico ORDER BY nome";
+                                                    $res = mysqli_query($connect, $sql);
+                                                    if ($sql) {
+                                                        while ($id = mysqli_fetch_assoc($res)) {
+                                                            if ($id['idAssociadoFisico'] == $dados['idAssociadoFisico']) {
+                                                                echo "<option value='" . $id['idAssociadoFisico'] . "'selected>" . $id['nome'] . "</option>";
+                                                            } else {
+                                                                echo "<option value='" . $id['idAssociadoFisico'] . "'>" . $id['nome'] . "</option>";
+                                                            }
+                                                        }
+                                                    }
+                                                    ?>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="dataPagamento">Data de pagamento</label>
-                                        <input type="date" class="form-control" id="dataPagamento" name="dataPagamento" required>
+                                        <input type="date" class="form-control" id="dataPagamento" value="<?php echo $dados['dataPagamento']; ?>" name="dataPagamento" required>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="tipo">Tipo de pagamento</label>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="Dinheiro" value="Dinheiro" name="tipo" class="custom-control-input">
-                                            <label class="custom-control-label" for="Dinheiro">Dinheiro</label>
+                                            <input type="radio" id="dinheiro" value="dinheiro" <?php echo ($dados['tipo'] == 'Dinheiro') ? 'checked' : ''; ?> name="tipo" class="custom-control-input">
+                                            <label class="custom-control-label" for="dinheiro">Dinheiro</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="Cheque" value="Cheque" name="tipo" class="custom-control-input">
-                                            <label class="custom-control-label" for="Cheque">Cheque</label>
+                                            <input type="radio" id="cheque" value="cheque" name="tipo" <?php echo ($dados['tipo'] == 'Cheque') ? 'checked' : ''; ?> class="custom-control-input">
+                                            <label class="custom-control-label" for="cheque">Cheque</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="Cartao" value="Cartao" name="tipo" class="custom-control-input">
-                                            <label class="custom-control-label" for="Cartao">Cartão</label>
+                                            <input type="radio" id="cartao" value="cartao" name="tipo" <?php echo ($dados['tipo'] == 'Cartao') ? 'checked' : ''; ?> class="custom-control-input">
+                                            <label class="custom-control-label" for="cartao">Cartão</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <label for="valor">Valor do pagamento</label>
-                                        <input type="text" class="form-control" id="valor" name="valor" size="10" maxlength="10" onkeydown="FormataMoeda(this,10,event)" onkeypress="return maskKeyPress(event)" required>
+                                        <input type="valor" class="form-control" id="valor" value="<?php echo $dados['valor']; ?>" name="valor" size="10" maxlength="10" onkeydown="FormataMoeda(this,10,event)" onkeypress="return maskKeyPress(event)" required>
                                     </div>
                                 </div>
-                                <button type="submit" name="cadastrarMensalidade" class="btn btn-success btn-block">Cadastrar</button>
+                                <button type="submit" name="editarMensalidade" class="btn btn-success btn-block">Atualizar</button>
                                 <button type="reset" class="btn btn-danger btn-block">Limpar</button>
                             </form>
                         </div>
@@ -260,7 +266,7 @@ if (!empty($_SESSION['id'])) {
         <script src="../assets/js/scripts.js"></script>
     </body>
 
-    </html>
+</html>
 <?php
 } else {
     header("Location: login/login.php?msg=4");

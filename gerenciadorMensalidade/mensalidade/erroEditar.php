@@ -1,11 +1,9 @@
-<!doctype html>
-<html class="no-js" lang="pt-br">
 <?php
-//Conexão
-include_once '../action/db_connect.php';
 session_start();
 if (!empty($_SESSION['id'])) {
     ?>
+    <!doctype html>
+    <html class="no-js" lang="pt-br">
 
     <head>
         <meta charset="utf-8">
@@ -24,7 +22,6 @@ if (!empty($_SESSION['id'])) {
         <link rel="stylesheet" href="../assets/css/styles.css">
         <link rel="stylesheet" href="../assets/css/responsive.css">
         <script src="../assets/js/vendor/modernizr-2.8.3.min.js"></script>
-
     </head>
 
     <body class="body-bg">
@@ -65,16 +62,16 @@ if (!empty($_SESSION['id'])) {
                                 <nav>
                                     <ul id="nav_menu">
                                         <li>
-                                            <a href="index.php" tabindex="1" class="horizontal-menu"><i class="fa fa-tv"></i><span>Início</span></a>
+                                            <a href="../index.php" tabindex="1" class="horizontal-menu"><i class="fa fa-tv"></i><span>Início</span></a>
                                         </li>
                                         <li>
-                                            <a href="associados/associado.php" tabindex="2"><i class="fa fa-group"></i><span>Associados</span></a>
+                                            <a href="../associados/associado.php" tabindex="2"><i class="fa fa-group"></i><span>Associados</span></a>
                                         </li>
                                         <li>
-                                            <a href="mensalidade/mensalidade.php" tabindex="3"><i class="fa fa-credit-card"></i><span>Mensalidades</span></a>
+                                            <a href="../mensalidade/mensalidade.php" tabindex="3"><i class="fa fa-credit-card"></i><span>Mensalidades</span></a>
                                         </li>
                                         <li class="mega-menu">
-                                            <a href="doacoes/doacoes.php" tabindex="4"><i class="fa fa-money"></i><span>Doações</span></a>
+                                            <a href="../doacoes/doacoes.php" tabindex="4"><i class="fa fa-money"></i><span>Doações</span></a>
                                         </li>
                                         <li class="mega-menu">
                                             <a href="funcionario/funcionario.php" tabindex="5"><i class="ti-user"></i> <span>Funcionários</span></a>
@@ -97,16 +94,12 @@ if (!empty($_SESSION['id'])) {
                             <div class="card">
                                 <div class="pricing-list">
                                     <div class="prc-head">
-                                        <h4 class="bg-danger">Aviso <i class="fa fa-warning"></i></h4>
+                                        <h4 class="bg-danger">Erro no cadastro</h4>
                                     </div>
                                     <div class="prc-list border rounded border-danger">
-                                        <h3>Você deseja realmente excluir?</h3><br />
-                                        <form action="../action/delete.php" method="POST">
-                                            <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
-                                            <button type="submit" name="excluirFuncionario" value="Sim" class="btn btn-danger">Sim <i class="fa fa-trash"></i></button>
-                                            <a href="listarFuncionario.php" class="btn btn-secondary">Não <i class="fa fa-arrow-left"></i></a>
-                                        </form>
-
+                                        <h3>OPS! <i class="fa fa-meh-o"></i></h3>
+                                        <h4>Algo de errado aconteceu! <br /> Mensalidade não foi alterada.</h4>
+                                        <a href="cadastrarMensalidade.php" class="bg-danger">Tentar novamente <i class="fa fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -134,7 +127,7 @@ if (!empty($_SESSION['id'])) {
             <script src="../assets/js/scripts.js"></script>
     </body>
 
-</html>
+    </html>
 <?php
 } else {
     header("Location: login/login.php?msg=4");
