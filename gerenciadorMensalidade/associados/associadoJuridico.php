@@ -1,5 +1,9 @@
+<?php
+session_start();
+if (!empty($_SESSION['id'])) {
+?>
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="pt-br">
 
 <head>
     <meta charset="utf-8">
@@ -42,7 +46,7 @@
                                 <img class="avatar user-thumb" src="../assets/images/author/avatar.png" alt="avatar">
                                 <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Administrador<i class="fa fa-angle-down"></i></h4>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Sair &nbsp<i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                                    <a class="dropdown-item" href="../login/sair.php">Sair &nbsp<i class="fa fa-sign-out" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -84,88 +88,103 @@
             </div>
         </div>
         <div class="main-content-inner">
-            <h3 class="centro text-center">Cadastrar associado jurídico</h3>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-11 col-sm-11 col-11 col-lg-11 mx-5 ml-auto">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label for="nome">Nome<b>*</b></label>
-                                    <input type="text" class="form-control" id="nome" placeholder="Digite o nome completo">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.php">Início</a></li>
+                    <li class="breadcrumb-item"><a href="associado.php">Associados</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Cadastrar associado jurídico</li>
+                </ol>
+            </nav>
+            <div class="py-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-11 col-sm-11 col-11 col-lg-11 mx-5 py-0 ml-auto">
+                            <h3 class="centro text-center">Cadastrar Associado Jurídico</h3>
+                            <form action="../action/create.php" method="POST" autocomplete="off">
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="nome">Nome<b>*</b></label>
+                                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome completo" required>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="cnpj">CNPJ<b>*</b></label>
-                                    <input type="text" class="form-control" id="cnpj" placeholder="Digite o CNPJ">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="cnpj">CNPJ<b>*</b></label>
+                                        <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Digite o CNPJ" minlength="18" maxlength="18" onkeypress="$(this).mask('00.000.000/0000-00')" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="telefone">Telefone<b>*</b></label>
+                                        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Digite o telefone" onkeypress="$(this).mask('(00) 00009-0000')" required>
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <label for="telefone">Telefone<b>*</b></label>
-                                    <input type="text" class="form-control" id="telefone" placeholder="Digite o telefone">
+                                <div class="form-group">
+                                    <label for="endereco">Endereço</label>
+                                    <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Digite o endereço">
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputAddress2">Endereço</label>
-                                <input type="text" class="form-control" id="endereco" placeholder="Digite o endereço">
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-3">
-                                    <label for="inputCity">Número</label>
-                                    <input type="text" class="form-control" id="numero" placeholder="Digite o número">
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label for="numero">Número</label>
+                                        <input type="text" class="form-control" id="numero" name="numero" placeholder="Digite o número">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="complemento">Complemento</label>
+                                        <input type="text" class="form-control" id="complemento" name="complemento" placeholder="Digite o complemento">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="bairro">Bairro</label>
+                                        <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Digite o bairro">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="cep">CEP</label>
+                                        <input type="text" class="form-control" id="cep" name="cep" minlength="8" maxlength="8" onkeypress="$(this).mask('00.000-000')" placeholder="Digite o CEP">
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-3">
-                                    <label for="inputCity">Complemento</label>
-                                    <input type="text" class="form-control" id="numero" placeholder="Digite o complemento">
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="email">E-mail<b>*</b></label>
+                                        <input type="text" class="form-control" id="email" name="email" placeholder="Digite o email" required>
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-3">
-                                    <label for="inputState">Bairro</label>
-                                    <input type="text" class="form-control" id="bairro" placeholder="Digite o bairro">
+                                <h6 class="text-danger">*Campos obrigatórios</h6><br />
+                                <div class="form-row">
+                                    <div class="form-group col-lg-12">
+                                        <button type="submit" name="cadastrarJuridico" class="btn btn-success btn-lg btn-block">Cadastrar</button>
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-3">
-                                    <label for="inputZip">CEP</label>
-                                    <input type="text" class="form-control" id="inputZip" placeholder="Digite o CEP">
+                                <div class="form-row">
+                                    <div class="form-group col-lg-12">
+                                        <button type="reset" class="btn btn-danger btn-lg btn-block">Limpar</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label for="inputCity">E-mail<b>*</b></label>
-                                    <input type="text" class="form-control" id="email" placeholder="Digite o email">
-                                </div>
-                            </div>
-                            <h6 class="text-danger">*Campos obrigatórios</h6><br />
-                            <div class="form-row">
-                                <div class="form-group col-lg-12">
-                                    <button type="submit" class="btn btn-success btn-lg btn-block">Cadastrar</button>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-lg-12">
-                                    <button type="reset" class="btn btn-danger btn-lg btn-block">Limpar</button>
-                                </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
+                    <footer>
+                        <div class="footer-area">
+                            <p>© ACDV 2019. Sistema gerenciador de mensalidades.</p>
+                        </div>
+                    </footer>
                 </div>
-                <footer>
-                    <div class="footer-area">
-                        <p>© ACDV 2019. Sistema gerenciador de mensalidades.</p>
-                    </div>
-                </footer>
-            </div>
-            <!-- jquery  -->
-            <script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
-            <!-- bootstrap 4 js -->
-            <script src="../assets/js/popper.min.js"></script>
-            <script src="../assets/js/bootstrap.min.js"></script>
-            <script src="../assets/js/owl.carousel.min.js"></script>
-            <!--Estilo dropdown-->
-            <script src="../assets/js/metisMenu.min.js"></script>
-            <!--Transforma DIV em barra de rolagem-->
-            <script src="../assets/js/jquery.slimscroll.min.js"></script>
-            <!--MENU MOBILE-->
-            <script src="../assets/js/jquery.slicknav.min.js"></script>
-            <script src="../assets/js/scripts.js"></script>
+                <!-- jquery  -->
+                <script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
+                <!-- bootstrap 4 js -->
+                <script src="../assets/js/popper.min.js"></script>
+                <script src="../assets/js/bootstrap.min.js"></script>
+                <script src="../assets/js/owl.carousel.min.js"></script>
+                <!--Estilo dropdown-->
+                <script src="../assets/js/metisMenu.min.js"></script>
+                <!--Transforma DIV em barra de rolagem-->
+                <script src="../assets/js/jquery.slimscroll.min.js"></script>
+                <!--MENU MOBILE-->
+                <script src="../assets/js/jquery.slicknav.min.js"></script>
+                <script src="../assets/js/scripts.js"></script>
+                <!--SCRIPT Mascaras -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 </body>
 
 </html>
+<?php
+} else {
+    header("Location: login/login.php?msg=4");
+}
+?>

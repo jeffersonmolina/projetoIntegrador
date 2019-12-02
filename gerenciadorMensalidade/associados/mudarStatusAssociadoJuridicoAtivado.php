@@ -1,9 +1,18 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
 <?php
+//Conexão
+include_once '../action/db_connect.php';
 session_start();
 if (!empty($_SESSION['id'])) {
+    //Select
+    if (isset($_GET['idJuridico'])) :
+        $idJuridico = mysqli_escape_string($connect, $_GET['idJuridico']);
+        $sql = "SELECT * FROM associadojuridico WHERE idJuridico = $idJuridico";
+        $resultado = mysqli_query($connect, $sql);
+        $dados = mysqli_fetch_array($resultado);
+    endif;
     ?>
-    <!doctype html>
-    <html class="no-js" lang="pt-br">
 
     <head>
         <meta charset="utf-8">
@@ -22,6 +31,7 @@ if (!empty($_SESSION['id'])) {
         <link rel="stylesheet" href="../assets/css/styles.css">
         <link rel="stylesheet" href="../assets/css/responsive.css">
         <script src="../assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
     </head>
 
     <body class="body-bg">
@@ -31,7 +41,7 @@ if (!empty($_SESSION['id'])) {
                     <div class="row align-items-center">
                         <div class="col-md-3">
                             <div class="logo">
-                                <a href="../index.php"><img src="../assets/images/icon/logoMenu.png" alt="logo"></a>
+                                <a href="index.php"><img src="../assets/images/icon/logoMenu.png" alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-md-9 clearfix text-right">
@@ -57,24 +67,24 @@ if (!empty($_SESSION['id'])) {
             <div class="header-area header-bottom">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-lg-9  d-none d-lg-block">
+                        <div class="col-lg-9 d-none d-lg-block">
                             <div class="horizontal-menu">
                                 <nav>
                                     <ul id="nav_menu">
                                         <li>
-                                            <a href="../index.php" tabindex="1" class="horizontal-menu"><i class="fa fa-tv"></i><span>Início</span></a>
+                                            <a href="index.php" tabindex="1" class="horizontal-menu"><i class="fa fa-tv"></i><span>Início</span></a>
                                         </li>
                                         <li>
-                                            <a href="../associados/associado.php" tabindex="2"><i class="fa fa-group"></i><span>Associados</span></a>
+                                            <a href="associados/associado.php" tabindex="2"><i class="fa fa-group"></i><span>Associados</span></a>
                                         </li>
                                         <li>
-                                            <a href="../mensalidade/mensalidade.php" tabindex="3"><i class="fa fa-credit-card"></i><span>Mensalidades</span></a>
+                                            <a href="mensalidade/mensalidade.php" tabindex="3"><i class="fa fa-credit-card"></i><span>Mensalidades</span></a>
                                         </li>
                                         <li class="mega-menu">
-                                            <a href="../doacoes/doacoes.php" tabindex="4"><i class="fa fa-money"></i><span>Doações</span></a>
+                                            <a href="doacoes/doacoes.php" tabindex="4"><i class="fa fa-money"></i><span>Doações</span></a>
                                         </li>
                                         <li class="mega-menu">
-                                            <a href="../funcionario/funcionario.php" tabindex="5"><i class="ti-user"></i> <span>Funcionários</span></a>
+                                            <a href="funcionario/funcionario.php" tabindex="5"><i class="ti-user"></i> <span>Funcionários</span></a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -89,62 +99,49 @@ if (!empty($_SESSION['id'])) {
             </div>
             <div class="main-content-inner">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="row">
-                                <div class="col-md-6 mt-5 mb-3">
-                                    <div class="card">
-                                        <div class="seo-fact sbg1">
-                                            <a href="cadastrarDoacoes.php">
-                                                <div class="p-4 d-flex justify-content-between align-items-center">
-                                                    <div class="seofct-icon"><i class="fa fa-user-plus"></i>
-                                                        Cadastrar doação
-                                                    </div>
-                                                    <h2>+</h2>
-                                                </div>
-                                            </a>
-                                        </div>
+                    <div class="row text-center align-items-center flex-grow-1 justify-content-center">
+                        <div class="col-xl-3 col-ml-6 col-mdl-4 col-sm-6 mt-5">
+                            <div class="card">
+                                <div class="pricing-list">
+                                    <div class="prc-head">
+                                        <h4 class="bg-success">Aviso <i class="fa fa-warning"></i></h4>
                                     </div>
-                                </div>
-                                <div class="col-md-6 mt-md-5 mb-3">
-                                    <div class="card">
-                                        <div class="seo-fact sbg2">
-                                            <a href="listardoacoes.php">
-                                                <div class="p-4 d-flex justify-content-between align-items-center">
-                                                    <div class="seofct-icon"><i class="fa fa-th-list"></i>
-                                                        Listar doações
-                                                    </div>
-                                                    <h2>+</h2>
-                                                </div>
-                                            </a>
-                                        </div>
+                                    <div class="prc-list border rounded border-success">
+                                        <h3>Você deseja realmente ativar o usuário?</h3><br />
+                                        <form action="../action/update.php" method="POST">
+                                            <input type="hidden" name="idJuridico" value="<?php echo $_GET['idJuridico']; ?>">
+                                            <button type="submit" name="mudarStatusAtivadoJuridico" class="btn btn-success">Sim <i class="fa fa-check"></i></button>
+                                            <a href="listarJuridico.php" class="btn btn-secondary">Não <i class="fa fa-arrow-left"></i></a>
+                                        </form>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <footer>
-                        <div class="footer-area">
-                            <p>© ACDV 2019. Sistema gerenciador de mensalidades.</p>
-                        </div>
-                    </footer>
                 </div>
-                <!-- jquery  -->
-                <script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
-                <!-- bootstrap 4 js -->
-                <script src="../assets/js/popper.min.js"></script>
-                <script src="../assets/js/bootstrap.min.js"></script>
-                <script src="../assets/js/owl.carousel.min.js"></script>
-                <!--Estilo dropdown-->
-                <script src="../assets/js/metisMenu.min.js"></script>
-                <!--Transforma DIV em barra de rolagem-->
-                <script src="../assets/js/jquery.slimscroll.min.js"></script>
-                <!--MENU MOBILE-->
-                <script src="../assets/js/jquery.slicknav.min.js"></script>
-                <script src="../assets/js/scripts.js"></script>
+                <footer>
+                    <div class="footer-area">
+                        <p>© ACDV 2019. Sistema gerenciador de mensalidades.</p>
+                    </div>
+                </footer>
+            </div>
+            <!-- jquery  -->
+            <script src="../assets/js/vendor/jquery-2.2.4.min.js"></script>
+            <!-- bootstrap 4 js -->
+            <script src="../assets/js/popper.min.js"></script>
+            <script src="../assets/js/bootstrap.min.js"></script>
+            <script src="../assets/js/owl.carousel.min.js"></script>
+            <!--Estilo dropdown-->
+            <script src="../assets/js/metisMenu.min.js"></script>
+            <!--Transforma DIV em barra de rolagem-->
+            <script src="../assets/js/jquery.slimscroll.min.js"></script>
+            <!--MENU MOBILE-->
+            <script src="../assets/js/jquery.slicknav.min.js"></script>
+            <script src="../assets/js/scripts.js"></script>
     </body>
 
-    </html>
+</html>
 <?php
 } else {
     header("Location: login/login.php?msg=4");

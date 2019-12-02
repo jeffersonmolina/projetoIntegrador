@@ -92,8 +92,8 @@ if (!empty($_SESSION['id'])) {
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.php">Início</a></li>
-                        <li class="breadcrumb-item"><a href="doacoes.php">Doações</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Lista de doações</li>
+                        <li class="breadcrumb-item"><a href="associado.php">Associados</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Lista de associados físicos</li>
                     </ol>
                 </nav>
                 <div class="py-0">
@@ -101,33 +101,48 @@ if (!empty($_SESSION['id'])) {
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="table-responsive">
-                                    <h4 style="text-align:center">Lista de doações</h4><br />
+                                    <h4 style="text-align:center">Lista de associados físicos</h4><br />
                                     <table class="table table-striped table-hover">
                                         <thead class="thead-dark">
                                             <tr>
-                                                <th tabindex="1">Nome</th>
-                                                <th tabindex="2">Data de pagamento</th>
-                                                <th tabindex="3">Tipo de pagamento</th>
-                                                <th tabindex="4">Valor de pagamento</th>
-                                                <th tabindex="5">Opções</th>
+                                                <th>Nome</th>
+                                                <th>Endereço</th>
+                                                <th>Telefone</th>
+                                                <th>Associado</th>
+                                                <th>Status</th>
+                                                <th>Opções</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php
-                                                $sql = "SELECT idDoacao, nome, date_format(`dataPagamento`,'%d/%m/%Y') as dataPagamento, tipo, valor FROM associadojuridico, doacao 
-                                                WHERE associadojuridico.idJuridico = doacao.idJuridico
-                                                ORDER BY dataPagamento DESC";
+                                                $sql = "SELECT * FROM associadofisico ORDER BY nome";
                                                 $resultado = mysqli_query($connect, $sql);
                                                 while ($dados = mysqli_fetch_array($resultado)) :
                                                     ?>
                                                 <tr>
                                                     <th><?php echo $dados['nome']; ?></th>
-                                                    <th><?php echo $dados['dataPagamento']; ?></th>
+                                                    <th><?php echo $dados['endereco'],", nº", $dados['numero'] ; ?></th>
+                                                    <th><?php echo $dados['telefone']; ?></th>
                                                     <th><?php echo $dados['tipo']; ?></th>
-                                                    <th><?php echo 'R$ ', $dados['valor']; ?></th>
+                                                    <?php if ($dados['status'] == 'ativo') : ?>
+                                                        <th class="table-success" style="text-align: center;">
+                                                            <h6><?php echo $dados['status']; ?></h6>
+                                                        </th>
+                                                    <?php else :  ?>
+                                                        <th class="table-danger" style="text-align: center;">
+                                                            <h6><?php echo $dados['status']; ?></h6>
+                                                        </th>
+                                                    <?php endif ?>
                                                     <th>
-                                                        <a class="btn btn-warning" href="editarDoacoes.php?idDoacao=<?php echo $dados['idDoacao']; ?>" role="button">Editar <i class="fa fa-edit"></i></a>
-                                                        <a class="btn btn-danger" href="sim.php?idDoacao=<?php echo $dados['idDoacao']; ?>" role="button">Excluir <i class="fa fa-trash"></i></a>
+                                                        <?php if ($dados['status'] == 'desativado') { ?>
+                                                            <a class="btn btn-primary btn-md disabled" tabindex="-1" href="visualizarAssociadoFisico.php?idAssociadoFisico=<?php echo $dados['idAssociadoFisico']; ?>" role="button" aria-disabled="true">Visualizar <i class="fa fa-eye"></i></a>
+                                                            <a class="btn btn-warning btn-md disabled" tabindex="-1" href="editarAssociadoFisico.php?idAssociadoFisico=<?php echo $dados['idAssociadoFisico']; ?>" role="button">Editar <i class="fa fa-edit"></i></a>
+                                                            <a class="btn btn-success" href="mudarStatusAssociadoFisicoAtivado.php?idAssociadoFisico=<?php echo $dados['idAssociadoFisico']; ?>" role="button">Ativar <i class="fa fa-check"></i></a>
+                                                        <?php } else { ?>
+                                                            <a class="btn btn-primary" href="visualizarAssociadoFisico.php?idAssociadoFisico=<?php echo $dados['idAssociadoFisico']; ?>" role="button" aria-disabled="true">Visualizar <i class="fa fa-eye"></i></a>
+                                                            <a class="btn btn-warning" href="editarAssociadoFisico.php?idAssociadoFisico=<?php echo $dados['idAssociadoFisico']; ?>" role="button">Editar <i class="fa fa-edit"></i></a>
+                                                            <a class="btn btn-danger" href="mudarStatusAssociadoFisico.php?idAssociadoFisico=<?php echo $dados['idAssociadoFisico']; ?>" role="button">Desativar <i class="fa fa-ban"></i></a>
+                                                        <?php } ?>
                                                     </th>
                                                 </tr>
                                             <?php endwhile; ?>
