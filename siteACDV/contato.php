@@ -14,10 +14,12 @@
     <link rel="stylesheet" href="css/bootstrap-colunas.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/fontenormal.css" type="text/css" media="screen">
 
+
     <!-- Contraste -->
     <link rel="alternate stylesheet" type="text/css" href="css/css_contraste.css" title="altocontraste" id="altocontraste" />
     <link rel="alternate stylesheet" type="text/css" href="css/fontegrande.css" title="fontegrande" id="fontegrande" />
     <script type="text/javascript" src="scripts/styleswitcher.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
     <script src="scripts/AC_RunActiveContent.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -125,7 +127,7 @@
 
                 <div class="container">
                     <div class="oprojeto">
-                        <form action="#" method="POST" name="Contactform" id="Contactform" onsubmit="MM_validateForm('nome','email','cidade','telefone','mensagem');
+                        <form action="email/sendEmail.php" method="POST" autocomplete="off" onsubmit="MM_validateForm('nome','email','cidade','telefone','mensagem');
                     return document.MM_returnValue">
                             <fieldset form="Contactform">
                                 <legend tabindex="15">Entre em contato por meio do formulário abaixo:</legend>
@@ -137,7 +139,7 @@
                                     </tr>
                                     <tr>
                                         <td><label for="email" title="Email"><span class="negrito">E-mail</span></label></td>
-                                        <td><input name="email" type="text" class="campo" id="email" size="70" placeholder="Digite seu e-mail" tabindex="17" /> </td>
+                                        <td><input name="email" id="email" type="email" class="campo" id="email" size="70" placeholder="Digite seu e-mail" tabindex="17" /> </td>
                                     </tr>
                                     <tr>
                                         <td><label for="cidade" title="Cidade"><span class="negrito">Cidade</span></label></td>
@@ -145,7 +147,7 @@
                                     </tr>
                                     <tr>
                                         <td><label for="telefone" title="Telefone" alt="Telefone"><span class="negrito">Telefone</span></label></td>
-                                        <td><input name="telefone" type="text" class="campo" onkeyup="mascara( this, mtel );" maxlength="15" placeholder="Digite seu telefone" tabindex="19" /> </td>
+                                        <td><input name="telefone" id="telefone" type="text" class="campo" onkeyup="mascara( this, mtel );" maxlength="15" placeholder="Digite seu telefone" tabindex="19" /> </td>
                                     </tr>
                                     <tr>
                                         <td><label for="mensagem"><span class="negrito">Mensagem</span></label></td>
@@ -155,14 +157,40 @@
                                         <td>
                                         </td>
                                         <td>
-                                            <button type="submit" value="Enviar" class="btn btn-success btn-lg" tabindex="21">Enviar</button>
-                                            <button type="reset" class="btn btn-danger btn-lg" tabindex="22">Limpar</button>                                            
+                                            <button type="submit" onclick="sendEmail()" value="Enviar" class="btn btn-success btn-lg" tabindex="21">Enviar</button>
+                                            <button type="reset" class="btn btn-danger btn-lg" tabindex="22">Limpar</button>
                                         </td>
-
                                     </tr>
                                 </table>
                             </fieldset>
                         </form>
+                        <?php
+                        if (isset($_GET['msg'])) {
+                            $msg = $_GET['msg'];
+                            switch ($msg) {
+                                case 1:
+                                    ?>
+                                    <div class="message">
+                                        <div class="alert alert-success">
+                                            <a href="login.php" class="close" data-dismiss="alert">&times</a>
+                                            <h6 style="text-align: center;">E-mail enviado com sucesso!</h6>
+                                        </div>
+                                    </div>
+                                <?php
+                                        break;
+                                    case 2:
+                                        ?>
+                                    <div class="message">
+                                        <div class="alert alert-danger">
+                                            <a href="login.php" class="close" data-dismiss="alert">&times</a>
+                                            <h6 style="text-align: center;">Ocorreu algum erro! O e-mail não foi enviado...</h6>
+                                        </div>
+                                    </div>
+                            <?php
+                                    break;
+                            }
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -216,7 +244,45 @@
     </div><!-- Fecha Container -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function sendEmail() {
+            var nome = $(#nome);
+            var email = $(#email);
+            var cidade = $(#cidade);
+            var telefone = $(#telefone);
+            var mensagem = $(#mensagem);
 
+            if (isNotEmpty(nome) && isNotEmpty(email) && isNotEmpty(cidade) && isNotEmpty(telefone) && isNotEmpty(mensagem) {
+                    $.ajax({
+                        url: 'email/sendEmail.php',
+                        method: 'POST',
+                        dataType: 'json',
+                        data: {
+                            nome: nome.val(),
+                            email: email.val(),
+                            cidade: cidade.val(),
+                            telefone: telefone.val(),
+                            mensagem: mensagem.val(),
+                        },
+                        success: function(response) {
+                            console.log(response);
+                        }
+                    });
+                }
+            }
+
+            function isNotEmpty(caller) {
+                if (caller.val() == "") {
+                    caller.css('border', '1px solid red');
+                    return false;
+                } else {
+                    caller.css('border', '');
+                    return true;
+                }
+    </script>
 </body>
 
 </html>
