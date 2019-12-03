@@ -105,11 +105,11 @@ if (!empty($_SESSION['id'])) {
                                     <table class="table table-striped table-hover">
                                         <thead class="thead-dark">
                                             <tr>
-                                                <th tabindex="1">Nome</th>
-                                                <th tabindex="3">Data de pagamento</th>
-                                                <th tabindex="5">Tipo de pagamento</th>
-                                                <th tabindex="7">Valor de pagamento</th>
-                                                <th tabindex="8">Opções</th>
+                                                <th tabindex="6">Nome</th>
+                                                <th tabindex="8">Data de pagamento</th>
+                                                <th tabindex="10">Tipo de pagamento</th>
+                                                <th tabindex="12">Valor de pagamento</th>
+                                                <th tabindex="14">Opções</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -121,11 +121,11 @@ if (!empty($_SESSION['id'])) {
                                                 while ($dados = mysqli_fetch_array($resultado)) :
                                                     ?>
                                                 <tr>
-                                                    <th><?php echo $dados['nome']; ?></th>
-                                                    <th><?php echo $dados['dataPagamento']; ?></th>
-                                                    <th><?php echo $dados['tipo']; ?></th>
-                                                    <th><?php echo 'R$ ', $dados['valor']; ?></th>
-                                                    <th>
+                                                    <th tabindex="7"><?php echo $dados['nome']; ?></th>
+                                                    <th tabindex="9"><?php echo $dados['dataPagamento']; ?></th>
+                                                    <th tabindex="11"><?php echo $dados['tipo']; ?></th>
+                                                    <th tabindex="13"><?php echo 'R$ ', $dados['valor']; ?></th>
+                                                    <th tabindex="15">
                                                         <a class="btn btn-warning" href="editarMensalidade.php?idMensalidade=<?php echo $dados['idMensalidade']; ?>" role="button">Editar <i class="fa fa-edit"></i></a>
                                                         <a class="btn btn-danger" href="sim.php?idMensalidade=<?php echo $dados['idMensalidade']; ?>" role="button">Excluir <i class="fa fa-trash"></i></a>
                                                     </th>

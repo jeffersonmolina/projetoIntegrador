@@ -188,7 +188,7 @@ if (!empty($_SESSION['id'])) {
                                 <div class="form-row">
                                     <div class="form-group col-lg-12">
                                         <label for="nome">Nome:</label>
-                                        <select id="nome" name="nome" class="form-control form-control-lg" required>
+                                        <select id="nome" name="nome" class="form-control form-control-lg" required="required">
                                             <option>Selecione</option>
                                             <?php
                                                 $sql = "SELECT nome, idJuridico FROM associadojuridico
@@ -210,10 +210,10 @@ if (!empty($_SESSION['id'])) {
                                         <label for="dataPagamento">Data de pagamento</label>
                                         <input type="date" class="form-control" id="dataPagamento" name="dataPagamento" required>
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-6" required>
                                         <label for="tipo">Tipo de pagamento</label>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="Dinheiro" value="Dinheiro" name="tipo" class="custom-control-input">
+                                            <input type="radio" id="Dinheiro" value="Dinheiro" name="tipo" class="custom-control-input" required="required">
                                             <label class="custom-control-label" for="Dinheiro">Dinheiro</label>
                                         </div>
                                         <div class="custom-control custom-radio">

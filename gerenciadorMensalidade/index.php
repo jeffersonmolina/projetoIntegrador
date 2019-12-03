@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!empty($_SESSION['id'])) {
-?>
+    ?>
     <!doctype html>
     <html class="no-js" lang="pt-br">
 
@@ -22,8 +22,11 @@ if (!empty($_SESSION['id'])) {
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
         <script src="assets/js/vendor/modernizr-2.8.3.min.js" type="text.javascript"></script>
-        <script src="assets/js/bootstrap-notify.min.js" type="text.javascript"></script>
-        <script src="assets/js/vendor/jquery-2.2.4.min.js" type="text.javascript"></script>
+        <script type="text/javascript">
+            jQuery(window).load(function($) {
+                atualizaRelogio();
+            });
+        </script>
     </head>
 
     <body class="body-bg">
