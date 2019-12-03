@@ -207,7 +207,7 @@ if (!empty($_SESSION['id'])) {
                                         </div>
                                     </div>
                                     <div class="invoice-table table-responsive mt-5">
-                                        <h5 style="text-align: right;">Tabela de valores doados</h5><br />
+                                        <h5 style="text-align: right;">Tabela de valores das mensalidades</h5><br />
                                         <table class="table table-bordered table-hover text-right">
                                             <thead>
                                                 <tr class="text-capitalize">
